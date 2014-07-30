@@ -73,7 +73,7 @@ public class PlayerScript: MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		/*
+
 		bool damagePlayer = false;
 		
 		// Collision with enemy
@@ -93,7 +93,12 @@ public class PlayerScript: MonoBehaviour {
 			HealthScript playerHealth = this.GetComponent<HealthScript>();
 			if (playerHealth != null) playerHealth.Damage(1);
 		}
-		*/
+
 	}
 
+	void OnDestroy()
+	{
+		transform.parent.gameObject.AddComponent<GameOverScript>();
+
+	}
 }

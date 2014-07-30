@@ -76,7 +76,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: .0134605858, z: 0, w: .999909401}
-  m_LocalPosition: {x: 6.5626564, y: 15.3097191, z: 0}
+  m_LocalPosition: {x: -2.0620873, y: 11.1694136, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1.74880958}
   m_Children:
   - {fileID: 400002}
@@ -143,7 +143,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Poly:
     m_Paths:
     - - {x: -.100000001, y: .119999997}
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 400000, guid: 737da5bf1c9184ca29915d919c89f8c3, type: 2}
-  shootingRate: .5
+  shootingRate: 1
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 400000, guid: 737da5bf1c9184ca29915d919c89f8c3, type: 2}
-  shootingRate: .5
+  shootingRate: 1
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 400000, guid: 737da5bf1c9184ca29915d919c89f8c3, type: 2}
-  shootingRate: .5
+  shootingRate: 1
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
