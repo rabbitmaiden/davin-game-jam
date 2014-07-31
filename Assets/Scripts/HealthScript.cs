@@ -26,6 +26,7 @@ public class HealthScript : MonoBehaviour
 		if (hp <= 0)
 		{
 			// Dead!
+			Debug.Log("I died. I was a "+this.name);
 			Destroy(gameObject);
 		}
 	}
@@ -40,9 +41,23 @@ public class HealthScript : MonoBehaviour
 			if (shot.isEnemyShot != isEnemy)
 			{
 				Damage(shot.damage);
+				Debug.Log("I am " + this.name + " and I was hit by " + otherCollider.name);
 				
 				// Destroy the shot
 				Destroy(shot.gameObject); // Remember to always target the game object, otherwise you will just remove the script
+			}
+		}
+		
+		// Is this a wall?
+		WallScript wall = otherCollider.gameObject.GetComponent<WallScript>();
+		if (wall != null)
+		{
+			// Avoid friendly fire
+			if (wall.isEnemyWall != isEnemy)
+			{
+				Damage(wall.damage);				
+				// Destroy the wall
+				Destroy(wall.gameObject); // Remember to always target the game object, otherwise you will just remove the script
 			}
 		}
 	}

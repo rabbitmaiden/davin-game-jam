@@ -13,9 +13,9 @@ GameObject:
   - 114: {fileID: 11400000}
   - 50: {fileID: 5000000}
   - 61: {fileID: 6100000}
-  - 114: {fileID: 11400002}
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400006}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Basic Wall
   m_TagString: Untagged
@@ -109,11 +109,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7432952a09d954ae996d2383c09ad01f, type: 3}
+  m_Script: {fileID: 11500000, guid: d4ad46a5b5055f64ca7a9322dabbdcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  isEnemyShot: 0
+  isEnemyWall: 1
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
