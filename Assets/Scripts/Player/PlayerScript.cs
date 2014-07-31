@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerScript: GameChild {
+public class PlayerScript: MovementScript {
 
 	/// <summary>
 	/// 1 - The speed of the ship
@@ -129,7 +129,9 @@ public class PlayerScript: GameChild {
 
 	void OnDestroy()
 	{
-		transform.parent.gameObject.AddComponent<GameOverScript>();
+		// Winner is other player
+		int winner = this.parentGame.isPlayer2 ? 1 : 2;
+		this.masterGame.GameOver(winner);
 
 	}
 }

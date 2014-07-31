@@ -19,6 +19,8 @@ public class WeaponScript : MonoBehaviour
 	/// </summary>
 	public float shootingRate = 0.25f;
 	
+	public bool ceaseFire = false;
+	
 	//--------------------------------
 	// 2 - Cooldown
 	//--------------------------------
@@ -80,7 +82,7 @@ public class WeaponScript : MonoBehaviour
 	{
 		get
 		{
-			return shootCooldown <= 0f;
+			return !ceaseFire && shootCooldown <= 0f;
 		}
 	}
 }

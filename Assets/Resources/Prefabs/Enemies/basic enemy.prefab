@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400004}
   m_Layer: 0
-  m_Name: enemy
+  m_Name: basic enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,6 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 400000, guid: 737da5bf1c9184ca29915d919c89f8c3, type: 2}
   shootingRate: 1
+  ceaseFire: 0
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -218,6 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 400000, guid: 737da5bf1c9184ca29915d919c89f8c3, type: 2}
   shootingRate: 1
+  ceaseFire: 0
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -231,6 +233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 400000, guid: 737da5bf1c9184ca29915d919c89f8c3, type: 2}
   shootingRate: 1
+  ceaseFire: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

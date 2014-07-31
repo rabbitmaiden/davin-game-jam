@@ -3,7 +3,7 @@
 /// <summary>
 /// Simply moves the current game object
 /// </summary>
-public class MoveScript : MonoBehaviour
+public class MoveScript : MovementScript
 {
 	// 1 - Designer variables
 	
