@@ -6,6 +6,7 @@ public class WedgeWave : MonoBehaviour {
 
 	public int xPos;
 	public int yPos;
+	public GameObject enemyToSpawn;
 	public string enemyType = "SingleShotEnemy";
 
 	private List<Vector2> enemyPositions;
@@ -33,7 +34,7 @@ public class WedgeWave : MonoBehaviour {
 
 	void SpawnEnemies() {
 		foreach(Vector2 enemyPos in enemyPositions){
-			GameObject enemyObject = (GameObject) Instantiate(Resources.Load("Prefabs/Enemies/SingleShotEnemy"));
+			GameObject enemyObject = (GameObject) Instantiate(enemyToSpawn);
 			if (object.ReferenceEquals(null, enemyObject)) {
 				Debug.LogError ("Could not load wave type: "+enemyType);
 			}

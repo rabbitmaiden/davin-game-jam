@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xPos: 0
   yPos: 0
+  enemyToSpawn: {fileID: 100002, guid: b5325e9fe0fd550499c4dbb88b2b694d, type: 2}
   enemyType: 
 --- !u!1001 &100100000
 Prefab:
