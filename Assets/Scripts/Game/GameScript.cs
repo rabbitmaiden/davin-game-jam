@@ -32,7 +32,6 @@ public class GameScript : MonoBehaviour {
 	
 	
 	void FixedUpdate() {
-		return;
 		foreach(Wave wave in waves) {
 			if (wave.deployed) {
 				continue;
