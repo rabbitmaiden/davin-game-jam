@@ -211,5 +211,6 @@ public class CameraFade : MonoBehaviour
 	void OnApplicationQuit()
 	{
 		mInstance = null;
+		Destroy(gameObject);
 	}
 }
