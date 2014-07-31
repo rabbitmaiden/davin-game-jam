@@ -104,7 +104,6 @@ public class PlayerScript: MovementScript {
 	{
 
 		bool damagePlayer = false;
-		
 		// Collision with enemy
 		EnemyScript enemy = collision.gameObject.GetComponent<EnemyScript>();
 		if (enemy != null)
