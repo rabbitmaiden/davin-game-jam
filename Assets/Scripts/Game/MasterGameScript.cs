@@ -17,6 +17,7 @@ public class MasterGameScript : MonoBehaviour {
 		// Hardcoded for now, we should maybe load these from XML or randomly generate them?
 		
 		// This is a straightwave sent when the player reaches 5%
+
 		waves.Add(new Wave(5, "SingleShotWedgeWave"));
 	}
 	
