@@ -88,6 +88,11 @@ public class Wave
 	
 	public Wave(){
 	}
+	
+	public Wave(double p, string t) {
+		percent = p;
+		type = t;
+	}
 	protected Wave(Wave other){
 		type = other.type;
 		percent = other.percent;

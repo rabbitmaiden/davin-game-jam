@@ -15,10 +15,9 @@ public class MasterGameScript : MonoBehaviour {
 		
 		// Make the waves
 		// Hardcoded for now, we should maybe load these from XML or randomly generate them?
-		Wave wave0 = new Wave();
-		wave0.percent = 5;
-		wave0.type = "StraightWave";
-		waves.Add(wave0);
+		
+		// This is a straightwave sent when the player reaches 5%
+		waves.Add(new Wave(5, "StraightWave"));
 	}
 	
 	void Start () {
