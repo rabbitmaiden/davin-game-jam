@@ -3,7 +3,7 @@
 /// <summary>
 /// Launch projectile
 /// </summary>
-public class WeaponScript : MonoBehaviour
+public class WeaponScript : GameChild
 {
 	//--------------------------------
 	// 1 - Designer variables
@@ -27,8 +27,9 @@ public class WeaponScript : MonoBehaviour
 	
 	private float shootCooldown;
 	
-	public void Start()
+	public override void Start()
 	{
+		base.Start();
 		shootCooldown = 0f;
 	}
 	
@@ -56,7 +57,7 @@ public class WeaponScript : MonoBehaviour
 			
 			// Create a new shot
 			var shotTransform = Instantiate(shotPrefab, transform.position, transform.rotation) as Transform;
-			shotTransform.parent = transform;
+			shotTransform.parent = parentGame.foreground;
 
 			
 			// The is enemy property
