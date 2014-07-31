@@ -583,6 +583,7 @@ Prefab:
   m_RootGameObject: {fileID: 857753723}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+
 --- !u!28 &1365339888
 Texture2D:
   m_ObjectHideFlags: 0
@@ -608,6 +609,7 @@ Texture2D:
   m_ColorSpace: 1
   image data: 4
   _typelessdata: 00000000
+
 --- !u!1 &1489003046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1387,7 +1389,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 254d6ac4c30824a4c8f5a1ca3757182a, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 254d6ac4c30824a4c8f5a1ca3757182a, type: 2}
       propertyPath: m_LocalScale.x
