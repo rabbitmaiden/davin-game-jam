@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: c43b71bc6cd4f4f43ad5ff3edb94086e
+guid: 68eee46557ab2c5488a563ccdcf33f7e
 TextureImporter:
   fileIDToRecycleName:
-    21300000: enemy
+    21300000: spr_enemy_sm_1_base
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,9 +26,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50

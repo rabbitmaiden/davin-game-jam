@@ -8,9 +8,9 @@ public class GameScript : MonoBehaviour {
 
 	public bool isPlayer2 = false;
 	public GUISkin guiSkin;
+	public Transform foreground;
 	
 	private MasterGameScript masterGame;
-	private Transform foreground;
 	private LevelScript level;
 	
 	private List<Wave> waves;
@@ -32,7 +32,6 @@ public class GameScript : MonoBehaviour {
 	
 	
 	void FixedUpdate() {
-
 		foreach(Wave wave in waves) {
 			if (wave.deployed) {
 				continue;
@@ -48,6 +47,7 @@ public class GameScript : MonoBehaviour {
 				
 				
 				int positionX = (isPlayer2) ? 15 : 0;
+				Debug.Log("positionsX: "+positionX+" isPlayer2: "+isPlayer2);
 				int positionY = 5;
 				waveObject.transform.position = new Vector2(positionX, positionY);
 				

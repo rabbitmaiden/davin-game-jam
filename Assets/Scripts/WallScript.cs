@@ -3,7 +3,7 @@
 /// <summary>
 /// Projectile behavior
 /// </summary>
-public class ShotScript : GameChild
+public class WallScript : GameChild
 {
 	// 1 - Designer variables
 	
@@ -15,18 +15,12 @@ public class ShotScript : GameChild
 	/// <summary>
 	/// Projectile damage player or enemies?
 	/// </summary>
-	public bool isEnemyShot = false;
+	public bool isEnemyWall = false;
 	
 	public override void Start()
 	{
 		base.Start ();
 		// 2 - Limited time to live to avoid any leak
 		Destroy(gameObject, 20); // 20sec
-	}
-	
-	public void Update() {
-		if (!renderer.IsVisibleFrom(this.playerCamera)) {
-			Destroy (this.gameObject);
-		}
 	}
 }

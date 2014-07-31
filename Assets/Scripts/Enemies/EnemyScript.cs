@@ -28,6 +28,7 @@ public class EnemyScript : GameChild
 		{
 			weapon.enabled = false;
 		}
+		Debug.Log("Good morning. I'm " + this.name);
 	}
 	
 	void Update()
@@ -43,6 +44,7 @@ public class EnemyScript : GameChild
 		{
 		
 			if (this.renderer.IsVisibleFrom (this.playerCamera) == false) {
+				Debug.Log("I died from being invisible. I am a "+this.name);
 				Destroy (this.gameObject);
 			}
 			
