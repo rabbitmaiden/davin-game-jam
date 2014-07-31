@@ -64,7 +64,7 @@ public class PlayerScript: MovementScript {
 			Mathf.Clamp(transform.position.y, topBorder, bottomBorder),
 			transform.position.z
 			);
-			
+
 		// 5 - Shooting
 		bool shoot;
 		if (!this.parentGame.isPlayer2) {
@@ -82,8 +82,6 @@ public class PlayerScript: MovementScript {
 				weapon.Attack(false);
 			}
 		}
-
-
 	}
 	
 	void FixedUpdate()
@@ -96,9 +94,9 @@ public class PlayerScript: MovementScript {
 			// Right now this is 1:1, we might want to multiply it by something
 			int verticalDifference = Mathf.CeilToInt(transform.position.y);
 			int newSpeed = 3 + verticalDifference;
-			level.speed = new Vector2(newSpeed, newSpeed);
+			level.speed = new Vector2(0, newSpeed);
 		} else {
-			level.speed = new Vector2(3, 3);
+			level.speed = new Vector2(0, 3);
 		}
 	}
 
