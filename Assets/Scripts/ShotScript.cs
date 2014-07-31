@@ -3,7 +3,7 @@
 /// <summary>
 /// Projectile behavior
 /// </summary>
-public class ShotScript : MonoBehaviour
+public class ShotScript : GameChild
 {
 	// 1 - Designer variables
 	
@@ -17,8 +17,9 @@ public class ShotScript : MonoBehaviour
 	/// </summary>
 	public bool isEnemyShot = false;
 	
-	void Start()
+	public override void Start()
 	{
+		base.Start ();
 		// 2 - Limited time to live to avoid any leak
 		Destroy(gameObject, 20); // 20sec
 	}

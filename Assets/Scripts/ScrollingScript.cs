@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Parallax scrolling script that should be assigned to a layer
 /// </summary>
-public class ScrollingScript : MonoBehaviour
+public class ScrollingScript : GameChild
 {
 	/// <summary>
 	/// Scrolling speed
@@ -32,9 +32,12 @@ public class ScrollingScript : MonoBehaviour
 	/// </summary>
 	private List<Transform> backgroundPart;
 	
+
 	// 3 - Get all the children
-	void Start()
+	public override void Start()
 	{
+		base.Start ();
+
 		// For infinite background only
 		if (isLooping)
 		{
@@ -57,7 +60,7 @@ public class ScrollingScript : MonoBehaviour
 			// We would need to add a few conditions to handle
 			// all the possible scrolling directions.
 			backgroundPart = backgroundPart.OrderBy(
-				t => t.position.x
+				t => t.position.y
 				).ToList();
 		}
 	}
@@ -72,11 +75,11 @@ public class ScrollingScript : MonoBehaviour
 		
 		movement *= Time.deltaTime;
 		transform.Translate(movement);
-		
+
 		// Move the camera
 		if (isLinkedToCamera)
 		{
-			Camera.main.transform.Translate(movement);
+			this.playerCamera.transform.Translate(movement);
 		}
 		
 		// 4 - Loop
@@ -91,13 +94,12 @@ public class ScrollingScript : MonoBehaviour
 				// Check if the child is already (partly) before the camera.
 				// We test the position first because the IsVisibleFrom
 				// method is a bit heavier to execute.
-				if (firstChild.position.y < Camera.main.transform.position.y)
+				if (firstChild.position.y < this.playerCamera.transform.position.y)
 				{
 					// If the child is already on the left of the camera,
 					// we test if it's completely outside and needs to be
 					// recycled.
-					Debug.Log(firstChild.renderer.IsVisibleFrom(Camera.main));
-					if (firstChild.renderer.IsVisibleFrom(Camera.main) == false)
+					if (firstChild.renderer.IsVisibleFrom(this.playerCamera) == false)
 					{
 						// Get the last child position.
 						Transform lastChild = backgroundPart.LastOrDefault();

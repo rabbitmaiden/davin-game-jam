@@ -25,7 +25,7 @@ public class WeaponScript : MonoBehaviour
 	
 	private float shootCooldown;
 	
-	void Start()
+	public void Start()
 	{
 		shootCooldown = 0f;
 	}
@@ -47,15 +47,15 @@ public class WeaponScript : MonoBehaviour
 	/// </summary>
 	public void Attack(bool isEnemy)
 	{
+
 		if (CanAttack)
 		{
 			shootCooldown = shootingRate;
 			
 			// Create a new shot
-			var shotTransform = Instantiate(shotPrefab) as Transform;
-			
-			// Assign position
-			shotTransform.position = transform.position;
+			var shotTransform = Instantiate(shotPrefab, transform.position, transform.rotation) as Transform;
+			shotTransform.parent = transform;
+
 			
 			// The is enemy property
 			ShotScript shot = shotTransform.gameObject.GetComponent<ShotScript>();

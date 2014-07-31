@@ -1,43 +1,61 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerScript: MonoBehaviour {
+public class PlayerScript: GameChild {
 
 	/// <summary>
 	/// 1 - The speed of the ship
 	/// </summary>
 	public Vector2 speed = new Vector2(10, 10);
-	
+
 	// 2 - Store the movement
 	private Vector2 movement;
-	
+
+	private LevelScript level;
+
+	public override void Start() {
+		base.Start();
+		
+		level = (LevelScript) parentGame.GetComponentInChildren (typeof(LevelScript));
+	}
+
 	void Update()
 	{
+		float inputX, inputY;
 		// 3 - Retrieve axis information
-		float inputX = Input.GetAxis("Horizontal");
-		float inputY = Input.GetAxis("Vertical");
-		
+		if (this.parentGame.isPlayer2) 
+		{
+			inputX = Input.GetAxis ("p2h");
+			inputY = Input.GetAxis ("p2v");
+		} 
+		else 
+		{
+			inputX = Input.GetAxis ("p1h");
+			inputY = Input.GetAxis ("p1v");
+		}
+
 		// 4 - Movement per direction
 		movement = new Vector2(
 			speed.x * inputX,
 			speed.y * inputY);
 
 
-		var dist = (transform.position - Camera.main.transform.position).z;
+
+		var dist = (transform.position - this.playerCamera.transform.position).z;
 		
-		var leftBorder = Camera.main.ViewportToWorldPoint(
+		var leftBorder = this.playerCamera.ViewportToWorldPoint(
 			new Vector3(0, 0, dist)
 			).x;
 		
-		var rightBorder = Camera.main.ViewportToWorldPoint(
+		var rightBorder = this.playerCamera.ViewportToWorldPoint(
 			new Vector3(1, 0, dist)
 			).x;
 		
-		var topBorder = Camera.main.ViewportToWorldPoint(
+		var topBorder = this.playerCamera.ViewportToWorldPoint(
 			new Vector3(0, 0, dist)
 			).y;
 		
-		var bottomBorder = Camera.main.ViewportToWorldPoint(
+		var bottomBorder = this.playerCamera.ViewportToWorldPoint(
 			new Vector3(0, 1, dist)
 			).y;
 		
@@ -46,11 +64,14 @@ public class PlayerScript: MonoBehaviour {
 			Mathf.Clamp(transform.position.y, topBorder, bottomBorder),
 			transform.position.z
 			);
-
+			
 		// 5 - Shooting
-		bool shoot = Input.GetButtonDown("Fire1");
-		shoot |= Input.GetButtonDown("Fire2");
-		// Careful: For Mac users, ctrl + arrow is a bad idea
+		bool shoot;
+		if (!this.parentGame.isPlayer2) {
+			shoot = Input.GetButtonDown("p1f1");
+		} else {
+			shoot = Input.GetButtonDown("p2f1");
+		}
 		
 		if (shoot)
 		{
@@ -67,8 +88,18 @@ public class PlayerScript: MonoBehaviour {
 	
 	void FixedUpdate()
 	{
-		// 5 - Move the game object
+		// Movement
 		rigidbody2D.velocity = movement;
+		
+		// If we are in the top half of the screen, increase the scrolling speed
+		if (transform.position.y > 0) {
+			// Right now this is 1:1, we might want to multiply it by something
+			int verticalDifference = Mathf.CeilToInt(transform.position.y);
+			int newSpeed = 3 + verticalDifference;
+			level.speed = new Vector2(newSpeed, newSpeed);
+		} else {
+			level.speed = new Vector2(3, 3);
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
