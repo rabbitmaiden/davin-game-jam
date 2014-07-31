@@ -15,45 +15,50 @@ public class SingleShotWiggle : MovementScript
 	/// <summary>
 	/// Moving direction
 	/// </summary>
-	public Vector2 direction = new Vector2(0, -1);
+	public Vector2 direction = new Vector2(-1, -1);
 	
 	private Vector2 movement;
 
-	private bool wiggleLeft = true;
+	private string wiggleDir = "left";
 	private int wiggleFrameCounter = 0;
 	private int wiggleFrameLimit = 60;
 	
 	void Update()
 	{
 		// 2 - Movement
-		wiggleFrameCounter++;
 
 
-		movement = new Vector2(
-			speed.x * direction.x,
-			speed.y * direction.y);
 	}
 	
 	void FixedUpdate()
 	{
-		if (wiggleLeft = true){
-			if(wiggleFrameCounter == 0){
-				direction.x = -1;
+
+		if (wiggleDir == "left"){
+			if(direction.x == 1){
+				direction = new Vector2(-1, direction.y);
 			}
 			if(wiggleFrameCounter == wiggleFrameLimit){
 				wiggleFrameCounter = 0;
-				wiggleLeft = false;
+				wiggleDir = "right";
+				Debug.Log ("wiggleDir set to: " + wiggleDir);
 			}
 		}
 		else{
-			if(wiggleFrameCounter == 0){
-				direction.x = 1;
+			if(direction.x == -1){
+				direction = new Vector2(1, direction.y);
 			}
 			if(wiggleFrameCounter == wiggleFrameLimit){
 				wiggleFrameCounter = 0;
-				wiggleLeft = true;
+				wiggleDir = "left";
+				Debug.Log ("wiggleDir set to: " + wiggleDir);
 			}
 		}
+		wiggleFrameCounter++;
+
+		movement = new Vector2(
+			speed.x * direction.x,
+			speed.y * direction.y);
+		Debug.Log ("wiggle X velocity: " + direction.x * speed.x);
 		// Apply movement to the rigidbody
 		rigidbody2D.velocity = movement;
 	}
