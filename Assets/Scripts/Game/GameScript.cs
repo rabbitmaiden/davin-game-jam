@@ -44,12 +44,8 @@ public class GameScript : MonoBehaviour {
 					Debug.LogError ("Could not load wave type: "+wave.type);
 				}
 				waveObject.transform.parent = foreground;
-				
-				
-				int positionX = (isPlayer2) ? 15 : 0;
-				Debug.Log("positionsX: "+positionX+" isPlayer2: "+isPlayer2);
-				int positionY = 5;
-				waveObject.transform.position = new Vector2(positionX, positionY);
+
+				waveObject.transform.localPosition = new Vector2(0, 12);
 				
 				Debug.Log ("Sending wave "+wave.type);
 			}
