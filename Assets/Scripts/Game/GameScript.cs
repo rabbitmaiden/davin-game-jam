@@ -8,9 +8,9 @@ public class GameScript : MonoBehaviour {
 
 	public bool isPlayer2 = false;
 	public GUISkin guiSkin;
+	public Transform foreground;
 	
 	private MasterGameScript masterGame;
-	private Transform foreground;
 	private LevelScript level;
 	
 	private List<Wave> waves;
@@ -32,7 +32,7 @@ public class GameScript : MonoBehaviour {
 	
 	
 	void FixedUpdate() {
-
+		return;
 		foreach(Wave wave in waves) {
 			if (wave.deployed) {
 				continue;
