@@ -23,4 +23,10 @@ public class ShotScript : GameChild
 		// 2 - Limited time to live to avoid any leak
 		Destroy(gameObject, 20); // 20sec
 	}
+	
+	public void Update() {
+		if (!renderer.IsVisibleFrom(this.playerCamera)) {
+			Destroy (this.gameObject);
+		}
+	}
 }
