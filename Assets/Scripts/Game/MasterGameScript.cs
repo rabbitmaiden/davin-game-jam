@@ -18,7 +18,7 @@ public class MasterGameScript : MonoBehaviour {
 		
 		// This is a straightwave sent when the player reaches 5%
 
-		waves.Add(new Wave(5, "SingleShotWedgeWave"));
+		waves.Add(new Wave(5, "WedgeWaveHolder"));
 
 	}
 	
