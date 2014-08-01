@@ -10,20 +10,29 @@ public class GameScript : MonoBehaviour {
 	public GUISkin guiSkin;
 	public Transform foreground;
 	
+	private Camera camera;
 	private MasterGameScript masterGame;
 	private LevelScript level;
+
+	private GameScript otherPlayer;
 	
 	private List<Wave> waves;
+
+
+	public int incomingCount = 0;
 	
 	void Awake() {
 		masterGame = GetComponentInParent<MasterGameScript>();
 		foreground = transform.Find ("Camera/Foreground");
 		level = GetComponentInChildren<LevelScript>();
+		camera = GetComponentInChildren<Camera>();
 		waves = new List<Wave>();
 	}
 
 	// Use this for initialization
 	void Start () {
+		otherPlayer = masterGame.GiveMeTheOtherPlayer(this);
+		Debug.Log("Me: "+isPlayer2+ " / Them: " + otherPlayer.isPlayer2);
 		foreach (Wave wave in masterGame.waves) {
 			Wave myWave = (Wave) wave.Clone ();
 			waves.Add (myWave);
@@ -32,6 +41,7 @@ public class GameScript : MonoBehaviour {
 	
 	
 	void FixedUpdate() {
+		// Spawn the PVE waves
 		foreach(Wave wave in waves) {
 			if (wave.deployed) {
 				continue;
@@ -44,8 +54,9 @@ public class GameScript : MonoBehaviour {
 					Debug.LogError ("Could not load wave type: "+wave.type);
 				}
 				waveObject.transform.parent = foreground;
-
-				waveObject.transform.localPosition = new Vector2(0, 12);
+				// Put stuff just above the camera
+				float positionY = (this.camera.orthographicSize) + 1;
+				waveObject.transform.localPosition = new Vector2(0, positionY);
 				
 				Debug.Log ("Sending wave "+wave.type);
 			}
@@ -58,20 +69,37 @@ public class GameScript : MonoBehaviour {
 	}
 	
 	void OnGUI() {
+		GUI.skin = guiSkin;
+		// Update incoming
+		string incomingText = "Incoming: "+incomingCount;
+		int positionY = Mathf.CeilToInt (5);
+		int positionX = Mathf.CeilToInt((Screen.width / 4) - 120);
+		if (isPlayer2) {
+			positionX = Mathf.CeilToInt((Screen.width / 4)*3 - 80);
+		}
+		GUI.Label (new Rect(positionX, positionY,200,30), incomingText, "Incoming");		
+		
+
+
+
+
+
+
+
 		if (!masterGame.gameOn) {
-			GUI.skin = guiSkin;
+
 			bool isWinner = (masterGame.winner == (isPlayer2 ? 2 : 1));
-			string text = isWinner ? "VICTORIOUS" : "DELETED";
-			string style = isWinner ? "End Winner" : "End Loser";
+			string gameOverText = isWinner ? "VICTORIOUS" : "DELETED";
+			string gameOverStyle = isWinner ? "End Winner" : "End Loser";
 			
-			int positionY = Mathf.CeilToInt((Screen.height / 2) - 20);
-			int positionX = Mathf.CeilToInt((Screen.width / 4) - 120);
+			positionY = Mathf.CeilToInt((Screen.height / 2) - 20);
+			positionX = Mathf.CeilToInt((Screen.width / 4) - 120);
 			
 			
 			if (isPlayer2) {
 				positionX = Mathf.CeilToInt((Screen.width / 4)*3 - 80);
 			}
-			GUI.Label (new Rect(positionX, positionY,200,30), text, style);		
+			GUI.Label (new Rect(positionX, positionY,200,30), gameOverText, gameOverStyle);		
 		}
 	}
 }

@@ -30,6 +30,15 @@ public class MasterGameScript : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	public GameScript GiveMeTheOtherPlayer(GameScript me) {
+		foreach(GameScript you in games) {
+			if (you != me ){
+				return you;
+			}
+		}
+		return null;
+	}
 	
 	public void GameOver(int winner) {
 		gameOn = false; 
