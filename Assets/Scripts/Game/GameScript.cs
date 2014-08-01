@@ -22,7 +22,7 @@ public class GameScript : MonoBehaviour {
 	public int incomingCount = 0;
 	private int threatCount = 0;
 
-	private bool justDumpedthreat = false;
+	private bool justDumpedThreat = false;
 
 	
 	void Awake() {
@@ -108,15 +108,27 @@ public class GameScript : MonoBehaviour {
 			threatCount = 100;
 		}
 	}
-
+	
+	// Send the other player some threat
 	public void dumpThreat() {
 		otherPlayer.getDunked (threatCount);
 		threatCount = 0;
+		justDumpedThreat = true;
 	}
 	
+	// Other player just sent us some threat
 	public void getDunked(int enemyThreat) {
 		// Generate a Revenge wave here
+		GameObject waveObject = (GameObject) Instantiate(Resources.Load("Prefabs/Waves/RevengeWave"));
+		waveObject.transform.parent = foreground;
 		
+		RevengeWave revenge = waveObject.GetComponent<RevengeWave>();
+		revenge.GenerateEnemiesBasedOnThreat(enemyThreat);
+
+		// Put stuff just above the camera
+		float positionY = (playerCamera.orthographicSize) + 1;
+		waveObject.transform.localPosition = new Vector2(0, positionY);
+		Debug.Log ("Sending Revenge Wave");
 	}
 
 

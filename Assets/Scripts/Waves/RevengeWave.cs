@@ -2,18 +2,32 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class RevengeWave : WaveScript {
+public class RevengeWave : GameChild {
+
+	protected int numEnemies = 0;
 
 	void Awake() {
 		enemyPositions = new List<EnemyPosition>();
 	}
 
-	void GenerateEnemiesBasedOnThreat(int threat) {
-		Debug.Log("Generating enemies for threat: "+threat);
+	public void GenerateEnemiesBasedOnThreat(int threat) {
+		numEnemies = threat;
+		// Create a shit ton of enemies
+		for (int i=0; i<numEnemies; i++) {
+			/*
+			GameObject enemyObject = (GameObject) Instantiate(Resources.Load ("Prefabs/Enemies/" + ep.enemyType));
+			if (object.ReferenceEquals(null, enemyObject)) {
+				Debug.LogError ("Could not load wave type: "+enemyType);
+			}
+			enemyObject.transform.parent = transform;
+			enemyObject.transform.localPosition = ep.position;
+			EnemyScript enemyScript = enemyObject.GetComponent<EnemyScript>();
+			enemyScript.value = ep.value;
+		*/
+		}
 	}
 
 	public override void Start() {
-		Debug.Log("I am a revenge wave and had start called on me");
-		//base.Start();
+
 	}
 }

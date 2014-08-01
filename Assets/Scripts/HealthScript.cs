@@ -26,7 +26,7 @@ public class HealthScript : MonoBehaviour
 		if (hp <= 0)
 		{
 			// Dead!
-			Debug.Log("I died. I was a "+this.name);
+			//Debug.Log("I died. I was a "+this.name);
 			//Destroy(gameObject);
 
 			KillableObject victim = gameObject.GetComponent(typeof(KillableObject)) as KillableObject;
@@ -44,7 +44,7 @@ public class HealthScript : MonoBehaviour
 			if (shot.isEnemyShot != isEnemy)
 			{
 				Damage(shot.damage);
-				Debug.Log("I am " + this.name + " and I was hit by " + otherCollider.name);
+				//Debug.Log("I am " + this.name + " and I was hit by " + otherCollider.name);
 				
 				// Destroy the shot
 				Destroy(shot.gameObject); // Remember to always target the game object, otherwise you will just remove the script
