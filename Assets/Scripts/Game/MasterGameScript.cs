@@ -21,7 +21,6 @@ public class MasterGameScript : MonoBehaviour {
 		
 		// Make the waves
 		// Hardcoded for now, we should maybe load these from XML or randomly generate them?
-
 		waves.Add(new Wave(5, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
 		waves.Add(new Wave(15, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
 		waves.Add(new Wave(25, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
