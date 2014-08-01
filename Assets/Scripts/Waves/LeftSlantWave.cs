@@ -2,11 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class SlantWave : WaveScript {
+public class LeftSlantWave : WaveScript {
 
 	// Use this for initialization
 	public void Awake() {
-		enemyType = "SingleShotEnemy";
 		enemyPositions = new List<EnemyPosition>();
 		enemyPositions.Add(new EnemyPosition(-4.5f, 0f, "basic floater", 1));
 		enemyPositions.Add(new EnemyPosition(-3f, 0.7f, "basic floater", 1));

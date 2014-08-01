@@ -6,7 +6,6 @@ public class WedgeWave : WaveScript {
 
 	// Use this for initialization
 	public void Awake() {
-		enemyType = "SingleShotEnemy";
 		enemyPositions = new List<EnemyPosition>();
 		enemyPositions.Add(new EnemyPosition(0f, 2f, "basic enemy"));
 		enemyPositions.Add(new EnemyPosition(1.5f, 5f, "basic enemy"));
