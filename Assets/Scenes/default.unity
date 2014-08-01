@@ -227,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deployed: 0
   percent: 0
+  enemyValue: 0
   enemyType: 
 --- !u!1 &820969885
 GameObject:
