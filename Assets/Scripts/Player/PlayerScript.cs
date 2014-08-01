@@ -7,6 +7,7 @@ public class PlayerScript: MovementScript, KillableObject {
 	/// 1 - The speed of the ship
 	/// </summary>
 	public Vector2 speed = new Vector2(10, 10);
+	public GameObject explosion;
 
 	// 2 - Store the movement
 	private Vector2 movement;
@@ -143,8 +144,10 @@ public class PlayerScript: MovementScript, KillableObject {
 	}
 
 	public void killed() {
+		var explosionNow = Instantiate(explosion, transform.position, transform.rotation) as Transform;
 		// Winner is other player
 		int winner = this.parentGame.isPlayer2 ? 1 : 2;
 		this.masterGame.GameOver(winner, "death");
+			Destroy (this.gameObject);
 	}
 }
