@@ -9,6 +9,8 @@ public class WaveScript : GameChild {
 	public bool deployed = false;
 	public double percent = 0;
 
+	public int enemyValue = 0;
+
 	protected List<EnemyPosition> enemyPositions;
 	public string enemyType;
 
@@ -23,8 +25,8 @@ public class WaveScript : GameChild {
 			}
 			enemyObject.transform.parent = transform;
 			enemyObject.transform.localPosition = ep.position;
-			
-
+			EnemyScript enemyScript = enemyObject.GetComponent<EnemyScript>();
+			enemyScript.value = ep.value;
 		}
 	}
 }
@@ -33,9 +35,16 @@ public class WaveScript : GameChild {
 public class EnemyPosition {
 	public Vector2 position;
 	public string enemyType;
+	public int value = 0;
 
 	public EnemyPosition(float x, float y, string type) {
 		position = new Vector2(x,y);
 		enemyType = type;
+	}
+
+	public EnemyPosition(float x, float y, string type, int val) {
+		position = new Vector2(x,y);
+		enemyType = type;
+		value = val;
 	}
 }
