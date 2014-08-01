@@ -11,6 +11,9 @@ public class MasterGameScript : MonoBehaviour {
 	private string winCondition;
 
 	public Texture[] endGameTextures;
+	public Texture reloadText;
+
+	private bool fireReloads = false;
 	
 	void Awake() {
 		games = this.gameObject.GetComponentsInChildren<GameScript>();
@@ -40,6 +43,15 @@ public class MasterGameScript : MonoBehaviour {
 	
 	void Start () {
 		gameOn = true;		
+	}
+
+	void Update() {
+		if(fireReloads && (Input.GetButtonDown("p1f1") ||
+			    Input.GetButtonDown("p1f2") ||
+			    Input.GetButtonDown("p2f1") ||
+			    Input.GetButtonDown("p2f2"))) {
+				Application.LoadLevel ("default");
+		}
 	}
 
 
@@ -75,7 +87,8 @@ public class MasterGameScript : MonoBehaviour {
 			weapon.ceaseFire = true;
 		}
 		
-		CameraFade.StartAlphaFade( new Color(0,0,0,0.6F), false, 3f, 0, () => { 
+		CameraFade.StartAlphaFade( new Color(0,0,0,0.6F), false, 2f, 0, () => { 
+			fireReloads = true;
 			Invoke ("BackToTitleScreen", 10);
 		} );
 		this.winner = winner;
@@ -105,9 +118,16 @@ public class MasterGameScript : MonoBehaviour {
 		int width = Mathf.CeilToInt(Screen.width * 0.8f);
 		int height = 40;
 		int posX = Mathf.CeilToInt ((Screen.width/2)-(width/2));
-		int posY = Mathf.CeilToInt ((Screen.height/2) + 80);
+		int posY = Mathf.CeilToInt ((Screen.height/2));
 		GUI.Label (new Rect(posX, posY, width, height), endGameTextures[index]);
 
+			
+		width = Mathf.CeilToInt(Screen.width * 0.6f);
+		height = 40;
+		posX = Mathf.CeilToInt ((Screen.width/2)-(width/2));
+		posY = Mathf.CeilToInt ((Screen.height/2)) + 200;
+
+		GUI.Label (new Rect(posX, posY, width, height), reloadText);
 
 	}
 }

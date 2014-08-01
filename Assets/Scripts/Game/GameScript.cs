@@ -146,7 +146,7 @@ public class GameScript : MonoBehaviour {
 			string gameOverText = isWinner ? "VICTORIOUS" : "DELETED";
 			string gameOverStyle = isWinner ? "End Winner" : "End Loser";
 			
-			positionY = Mathf.CeilToInt((Screen.height / 2) - 20);
+			positionY = Mathf.CeilToInt((Screen.height / 2) - 120);
 			positionX = Mathf.CeilToInt((Screen.width / 4) - 120);
 			if (isPlayer2) {
 				positionX = Mathf.CeilToInt((Screen.width / 4)*3 - 80);
