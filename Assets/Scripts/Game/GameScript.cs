@@ -16,12 +16,14 @@ public class GameScript : MonoBehaviour {
 	private LevelScript level;
 
 	private GameScript otherPlayer;
-	
 	private List<Wave> waves;
 
 
 	public int incomingCount = 0;
 	private int threatCount = 0;
+
+	private bool justDumpedthreat = false;
+
 	
 	void Awake() {
 		masterGame = GetComponentInParent<MasterGameScript>();
@@ -70,8 +72,8 @@ public class GameScript : MonoBehaviour {
 	
 	void OnGUI() {
 		GUI.skin = guiSkin;
-		// Update incoming
-		string incomingText = "Incoming: "+incomingCount;
+		// Incoming Count and Threat Count Temp
+		string incomingText = "Incoming: "+incomingCount + " / Threat: "+threatCount;
 		int positionY = Mathf.CeilToInt (5);
 		int positionX = Mathf.CeilToInt((Screen.width / 4) - 120);
 		if (isPlayer2) {
@@ -87,15 +89,12 @@ public class GameScript : MonoBehaviour {
 		GUI.Label (new Rect(positionX, positionY,400,50), threatTextures[threatCount/10]);
 
 		if (!masterGame.gameOn) {
-
 			bool isWinner = (masterGame.winner == (isPlayer2 ? 2 : 1));
 			string gameOverText = isWinner ? "VICTORIOUS" : "DELETED";
 			string gameOverStyle = isWinner ? "End Winner" : "End Loser";
 			
 			positionY = Mathf.CeilToInt((Screen.height / 2) - 20);
 			positionX = Mathf.CeilToInt((Screen.width / 4) - 120);
-			
-			
 			if (isPlayer2) {
 				positionX = Mathf.CeilToInt((Screen.width / 4)*3 - 80);
 			}
@@ -109,6 +108,18 @@ public class GameScript : MonoBehaviour {
 			threatCount = 100;
 		}
 	}
+
+	public void dumpThreat() {
+		otherPlayer.getDunked (threatCount);
+		threatCount = 0;
+	}
+	
+	public void getDunked(int enemyThreat) {
+		// Generate a Revenge wave here
+		
+	}
+
+
 }
 
 public class Wave
