@@ -10,7 +10,7 @@ public class GameScript : MonoBehaviour {
 	public GUISkin guiSkin;
 	public Transform foreground;
 	
-	private Camera camera;
+	private Camera playerCamera;
 	private MasterGameScript masterGame;
 	private LevelScript level;
 
@@ -25,6 +25,7 @@ public class GameScript : MonoBehaviour {
 	void Awake() {
 		masterGame = GetComponentInParent<MasterGameScript>();
 		foreground = transform.Find ("Camera/Foreground");
+		playerCamera = GetComponentInChildren<Camera>();
 		level = GetComponentInChildren<LevelScript>();
 		waves = new List<Wave>();
 	}
@@ -54,9 +55,8 @@ public class GameScript : MonoBehaviour {
 				}
 				waveObject.transform.parent = foreground;
 				// Put stuff just above the camera
-				float positionY = (this.camera.orthographicSize) + 1;
+				float positionY = (playerCamera.orthographicSize) + 1;
 				waveObject.transform.localPosition = new Vector2(0, positionY);
-				
 				Debug.Log ("Sending wave "+wave.type);
 			}
 		}
