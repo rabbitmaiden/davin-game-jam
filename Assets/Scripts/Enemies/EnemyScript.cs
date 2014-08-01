@@ -9,6 +9,8 @@ public class EnemyScript : GameChild
 	private WeaponScript[] weapons;
 	private bool hasSpawn = false;
 	private MoveScript moveScript;
+
+	public int value = 0;
 	
 	void Awake()
 	{
@@ -28,6 +30,7 @@ public class EnemyScript : GameChild
 		{
 			weapon.enabled = false;
 		}
+		this.parentGame.incomingCount++;
 		Debug.Log("Good morning. I'm " + this.name);
 	}
 	
@@ -63,6 +66,7 @@ public class EnemyScript : GameChild
 
 	void Spawn()
 	{
+		this.parentGame.incomingCount--;
 		this.hasSpawn = true;
 		collider2D.enabled = true;
 		foreach (WeaponScript weapon in weapons)
