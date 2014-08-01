@@ -10,7 +10,7 @@ public class EnemyScript : GameChild, KillableObject
 	private bool hasSpawn = false;
 	private MoveScript moveScript;
 
-	public int value = 0;
+	public int value = 5;
 	
 	void Awake()
 	{

@@ -25,7 +25,7 @@ public class GameScript : MonoBehaviour {
 	public int incomingCount = 0;
 	public int threatCount = 0;
 
-	private bool justDumpedThreat = false;
+	private float threatCooldown = 0;
 
 	
 	void Awake() {
@@ -61,6 +61,14 @@ public class GameScript : MonoBehaviour {
 					Debug.LogError ("Could not load wave type: "+wave.type);
 				}
 				waveObject.transform.parent = foreground;
+
+				if (wave.type == "RandomSimpleWave") {
+					RandomSimpleWave rando = waveObject.GetComponent<RandomSimpleWave>();
+					rando.seed = wave.seed;
+					Debug.Log ("Set seed of "+wave.seed+" on rando");
+				}
+
+
 				// Put stuff just above the camera
 				float positionY = (playerCamera.orthographicSize) + 1;
 				waveObject.transform.localPosition = new Vector2(0, positionY);
@@ -99,8 +107,27 @@ public class GameScript : MonoBehaviour {
 		positionX = Mathf.CeilToInt((Screen.width / 4) + 50);
 		if (isPlayer2) {
 			positionX = Mathf.CeilToInt((Screen.width / 4)*3 - 250);
-		}		
-		GUI.Label (new Rect(positionX, positionY,200,50), threatTextures[threatCount/10]);
+		}
+		
+		int threatTextureIndex = 0;
+
+
+		if (Time.time < threatCooldown) {
+			GUI.Label (new Rect(positionX, positionY, 200, 50), "BUFFER OVERFLOW", "Buffer Overflow");
+			
+		} else {
+			float threat = threatCount;
+			// Always round up to nearest ten
+			if (threat < 90) {
+				threatTextureIndex = Mathf.CeilToInt(threat/10);
+			} else {
+				// But round down to 90 to only show full if we hit 100
+				threatTextureIndex = Mathf.FloorToInt (threat/10);
+			}
+			GUI.Label (new Rect(positionX, positionY,200,50), threatTextures[threatTextureIndex]);
+		}
+
+
 
 		// Vector Label
 		positionX = Mathf.CeilToInt((Screen.width / 4) - 60);
@@ -140,12 +167,14 @@ public class GameScript : MonoBehaviour {
 	
 	// Send the other player some threat
 	public void dumpThreat() {
-		if(threatCount <=0 || justDumpedThreat) {
+		if(threatCount <=0 || Time.time < threatCooldown) {
 			return;
 		}
 		otherPlayer.getDunked (threatCount);
 		threatCount = 0;
-		justDumpedThreat = true;
+
+		// When the buffer overflow goes away and we can dump again
+		threatCooldown = Time.time + 3f;
 	}
 	
 	// Other player just sent us some threat
@@ -161,6 +190,7 @@ public class Wave
 	public string type;
 	public double percent;
 	public bool deployed = false;
+	public int seed = 0;
 	
 	public Wave(){
 	}
@@ -169,10 +199,16 @@ public class Wave
 		percent = p;
 		type = t;
 	}
+	public Wave(double p, string t, int s) {
+		percent = p;
+		type = t;
+		seed = s;
+	}
 	protected Wave(Wave other){
 		type = other.type;
 		percent = other.percent;
 		deployed = other.deployed;
+		seed = other.seed;
 	}
 	public virtual object Clone()
 	{

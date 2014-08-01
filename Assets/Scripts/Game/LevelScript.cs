@@ -20,7 +20,7 @@ public class LevelScript : ScrollingScript {
 		}
 		
 		// Draw the progress meter
-		int positionY = Screen.height - 25;
+		int positionY = Screen.height - 30;
 		int positionX = 20;		
 
 		var gameOver = false;
@@ -33,7 +33,7 @@ public class LevelScript : ScrollingScript {
 
 		string progress = "Progress: " + percent  + '%';
 		if (this.parentGame.isPlayer2) {
-			positionX = Screen.width - 160;
+			positionX = Screen.width - 180;
 		}
 		GUI.Label (new Rect(positionX, positionY,200,30), progress);
 		
