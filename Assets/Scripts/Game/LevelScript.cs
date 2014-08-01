@@ -20,7 +20,7 @@ public class LevelScript : ScrollingScript {
 		}
 		
 		// Draw the progress meter
-		int positionY = Screen.height - 50;
+		int positionY = Screen.height - 25;
 		int positionX = 20;		
 
 		var gameOver = false;
