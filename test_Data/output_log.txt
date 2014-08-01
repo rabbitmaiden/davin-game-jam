@@ -10,7 +10,7 @@ Platform assembly: C:\Users\arehfeldt\Desktop\THUNDERDOME\davin-game-jam\test_Da
 Loading C:\Users\arehfeldt\Desktop\THUNDERDOME\davin-game-jam\test_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\Users\arehfeldt\Desktop\THUNDERDOME\davin-game-jam\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\Users\arehfeldt\Desktop\THUNDERDOME\davin-game-jam\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.067 seconds
+- Completed reload, in  0.062 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1200 59Hz; virtual: 1920x1200 at 0,0
@@ -20,21 +20,25 @@ Time to go!
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-UnloadTime: 0.291822 ms
+UnloadTime: 0.281582 ms
 hey now
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 236.
-Total: 0.978226 ms (FindLiveObjects: 0.017918 ms CreateObjectMapping: 0.010970 ms MarkObjects: 0.085571 ms  DeleteObjects: 0.011336 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 237.
+Total: 0.643983 ms (FindLiveObjects: 0.017553 ms CreateObjectMapping: 0.011336 ms MarkObjects: 0.084840 ms  DeleteObjects: 0.011336 ms)
 
 Set seed of 0 on rando
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
 Sending wave RandomSimpleWave
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+RandomWave Spawning Wave 0
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -50,7 +54,33 @@ RandomWave Spawning Wave 0
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-RandomWave Spawning Wave 0
+Set seed of 9 on rando
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Sending wave RandomSimpleWave
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+RandomWave Spawning Wave 9
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+UnloadTime: 0.549269 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 94 unused Assets to reduce memory usage. Loaded Objects now: 179.
+Total: 0.723338 ms (FindLiveObjects: 0.009507 ms CreateObjectMapping: 0.011702 ms MarkObjects: 0.125798 ms  DeleteObjects: 0.057779 ms)
+
+UnloadTime: 0.259275 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 141.
+Total: 0.669947 ms (FindLiveObjects: 0.007313 ms CreateObjectMapping: 0.010970 ms MarkObjects: 0.098736 ms  DeleteObjects: 0.064727 ms)
+
+UnloadTime: 0.231117 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 146.
+Total: 0.601929 ms (FindLiveObjects: 0.007679 ms CreateObjectMapping: 0.010605 ms MarkObjects: 0.098371 ms  DeleteObjects: 0.006948 ms)
 

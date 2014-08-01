@@ -3,9 +3,9 @@ using System.Collections;
 
 public class TitleScreenScript : MonoBehaviour {
 
-	public float timeToAttract = 5f;
+	public float timeToAttract = 8f;
 	protected float loadTime;
-
+	protected bool fading = false;
 	// Use this for initialization
 	void Start () {
 		loadTime = Time.time;
@@ -21,8 +21,12 @@ public class TitleScreenScript : MonoBehaviour {
 			HideEverything ();
 			Application.LoadLevel ("default");
 		} else if (Time.time > loadTime + timeToAttract) {
-			Debug.Log ("Loading Attract Mode");
-			//Application
+			if(!fading){
+				CameraFade.StartAlphaFade( new Color(0,0,0,0.8F), false, 4f, 0, () => { 
+					Application.LoadLevel ("Attract Mode");
+				} );
+				fading = true;
+			}
 		}
 	}
 
