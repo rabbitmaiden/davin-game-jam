@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class RevengeSpawner : GameChild {
-	protected List<List<GameObject>> waves;
+	protected Queue<List<GameObject>> waves;
 	protected int numEnemies = 0;
 	protected float cooldownTil = 0;
 
 	void Awake() {
-		waves = new List<List<GameObject>>();
+		waves = new Queue<List<GameObject>>();
 	}
 
 	public void GenerateEnemiesBasedOnThreat(int threat) {
@@ -39,23 +39,41 @@ public class RevengeSpawner : GameChild {
 			j++;
 			if(j>=positions.Length) {
 				j=0;
-				waves.Add (wave);
+				waves.Enqueue (wave);
 				wave = new List<GameObject>();
 			}
 		}
 
 		if(wave.Count > 0) {
+			waves.Enqueue (wave);
 		}
-		Debug.Log("Generated "+threat+" Revenge Missiles");
+		Debug.Log ("Sending revenge wave in 3 seconds");
+		Invoke ("LaunchWave", 3);
 	}
 
-	public override void Start() {
+	void LaunchWave(){
+		if( waves.Count == 0) {
+			return;
+		}
 
+		List<GameObject> wave = waves.Dequeue();
+		foreach(GameObject enemyObject in wave) {
+			// Wake up, Mr Freeman
+			TrackingScript tracking = enemyObject.GetComponent<TrackingScript>();
+			tracking.enabled = true;
+		}
+
+		if(waves.Count > 0) {
+			Debug.Log ("Sending another wave in 3 seconds");
+			Invoke("LaunchWave", 3);
+		}
 	}
+
+
 
 	void FixedUpdate()
 	{
-
+		
 	}
 
 }
