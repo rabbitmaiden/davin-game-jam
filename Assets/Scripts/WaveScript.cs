@@ -7,7 +7,6 @@ public class WaveScript : GameChild {
 	private EnemyScript[] enemies;
 
 	public bool deployed = false;
-	public double percent = 0;
 
 	public int enemyValue = 0;
 

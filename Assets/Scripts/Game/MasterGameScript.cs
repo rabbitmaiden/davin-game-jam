@@ -16,7 +16,13 @@ public class MasterGameScript : MonoBehaviour {
 		// Make the waves
 		// Hardcoded for now, we should maybe load these from XML or randomly generate them?
 
-		waves.Add(new Wave(5, "Chunk1Wave"));
+		waves.Add(new Wave(5, "RandomSimpleWave", 0));
+		waves.Add(new Wave(10, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
+		waves.Add(new Wave(15, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
+		waves.Add(new Wave(20, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
+		waves.Add(new Wave(25, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
+		waves.Add(new Wave(30, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
+		waves.Add(new Wave(35, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
 		/*
 		waves.Add(new Wave(10, "RightSlantWave"));
 		waves.Add(new Wave(15, "LeftSlantWave"));
@@ -24,6 +30,7 @@ public class MasterGameScript : MonoBehaviour {
 		waves.Add(new Wave(30, "WedgeWave"));
 		waves.Add(new Wave(40, "SpinningWave"));
 		*/
+		Debug.Log ("hey now");
 	}
 	
 	void Start () {
@@ -62,8 +69,14 @@ public class MasterGameScript : MonoBehaviour {
 			
 		} );
 		this.winner = winner;
-		Debug.Log ("Player "+winner+" wins!!");
+
+
 		
+		Invoke ("BackToTitleScreen", 10);
+	}
+
+	protected void BackToTitleScreen() {
+		Application.LoadLevel ("Title Screen");
 	}
 	
 }

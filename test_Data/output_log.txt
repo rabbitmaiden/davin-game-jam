@@ -2,128 +2,55 @@ Initialize engine version: 4.5.2f1 (9abb1b59b47c)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA Quadro 1000M  (ID=0xdfa)
+    Renderer: NVIDIA Quadro 2000 (ID=0xdd8)
     Vendor:   NVIDIA
-    VRAM:     2014 MB
+    VRAM:     977 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\dpavlas\Documents\GitHub\Thunderdome\davin-game-jam\test_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\dpavlas\Documents\GitHub\Thunderdome\davin-game-jam\test_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\dpavlas\Documents\GitHub\Thunderdome\davin-game-jam\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\dpavlas\Documents\GitHub\Thunderdome\davin-game-jam\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.050 seconds
-desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+Platform assembly: C:\Users\arehfeldt\Desktop\THUNDERDOME\davin-game-jam\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\arehfeldt\Desktop\THUNDERDOME\davin-game-jam\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\arehfeldt\Desktop\THUNDERDOME\davin-game-jam\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\arehfeldt\Desktop\THUNDERDOME\davin-game-jam\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+- Completed reload, in  0.067 seconds
 <RI> Initializing input.
 <RI> Input initialized.
-Platform assembly: C:\Users\dpavlas\Documents\GitHub\Thunderdome\davin-game-jam\test_Data\Managed\System.Core.dll (this message is harmless)
-Sending wave LeftSlantWave
+desktop: 1920x1200 59Hz; virtual: 1920x1200 at 0,0
+Platform assembly: C:\Users\arehfeldt\Desktop\THUNDERDOME\davin-game-jam\test_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\arehfeldt\Desktop\THUNDERDOME\davin-game-jam\test_Data\Managed\System.Core.dll (this message is harmless)
+Time to go!
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Sending wave LeftSlantWave
+UnloadTime: 0.291822 ms
+hey now
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Sending wave RightSlantWave
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 236.
+Total: 0.978226 ms (FindLiveObjects: 0.017918 ms CreateObjectMapping: 0.010970 ms MarkObjects: 0.085571 ms  DeleteObjects: 0.011336 ms)
+
+Set seed of 0 on rando
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Sending wave RightSlantWave
+Sending wave RandomSimpleWave
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Sending wave LeftSlantWave
+Set seed of 0 on rando
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Sending wave LeftSlantWave
+Sending wave RandomSimpleWave
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Sending wave WedgeWave
+RandomWave Spawning Wave 0
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Sending wave WedgeWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave WedgeWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave WedgeWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-I died from being invisible. I am a basic enemy(Clone)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-I died from being invisible. I am a basic enemy(Clone)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-I died from being invisible. I am a basic enemy(Clone)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-I died from being invisible. I am a basic enemy(Clone)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave SpinningWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-I died from being invisible. I am a basic enemy(Clone)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-I died from being invisible. I am a basic enemy(Clone)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave SpinningWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-I died from being invisible. I am a basic enemy(Clone)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-I died from being invisible. I am a basic enemy(Clone)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-I died from being invisible. I am a basic enemy(Clone)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-I died from being invisible. I am a basic enemy(Clone)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-I died from being invisible. I am a basic enemy(Clone)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-I died from being invisible. I am a basic enemy(Clone)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-I died from being invisible. I am a basic enemy(Clone)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-I died from being invisible. I am a basic enemy(Clone)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-I died from being invisible. I am a basic enemy(Clone)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-I died from being invisible. I am a basic enemy(Clone)
+RandomWave Spawning Wave 0
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
