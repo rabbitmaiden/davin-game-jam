@@ -16,6 +16,7 @@ public class GameScript : MonoBehaviour {
 	private Camera playerCamera;
 	private MasterGameScript masterGame;
 	private LevelScript level;
+	private RevengeSpawner revengeSpawner;
 
 	private GameScript otherPlayer;
 	private List<Wave> waves;
@@ -31,6 +32,7 @@ public class GameScript : MonoBehaviour {
 		masterGame = GetComponentInParent<MasterGameScript>();
 		foreground = transform.Find ("Camera/Foreground");
 		playerCamera = GetComponentInChildren<Camera>();
+		revengeSpawner = GetComponentInChildren<RevengeSpawner>();
 		level = GetComponentInChildren<LevelScript>();
 		waves = new List<Wave>();
 	}
@@ -145,17 +147,7 @@ public class GameScript : MonoBehaviour {
 	
 	// Other player just sent us some threat
 	public void getDunked(int enemyThreat) {
-		// Generate a Revenge wave here
-		GameObject waveObject = (GameObject) Instantiate(Resources.Load("Prefabs/Waves/RevengeWave"));
-		waveObject.transform.parent = foreground;
-		
-		RevengeWave revenge = waveObject.GetComponent<RevengeWave>();
-		revenge.GenerateEnemiesBasedOnThreat(enemyThreat);
-
-		// Put stuff just above the camera
-		float positionY = (playerCamera.orthographicSize) + 1;
-		waveObject.transform.localPosition = new Vector2(0, positionY);
-		Debug.Log ("Sending Revenge Wave");
+		revengeSpawner.GenerateEnemiesBasedOnThreat(enemyThreat);
 	}
 
 
