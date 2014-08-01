@@ -20,11 +20,6 @@ public class TrackingScript : MovementScript
 	public Vector2 target;
 
 	private Vector2 movement;
-	
-	void Start()	
-	{
-		
-	}
 
 	void Update()
 	{

@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: RevengeWave
+  m_Name: RevengeSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,13 +36,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76b37ca0e2a1b38459eaea9069ab40c3, type: 3}
+  m_Script: {fileID: 11500000, guid: 40e43274836bf5b4c8f469d6943fdace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deployed: 0
-  percent: 0
-  enemyValue: 0
-  enemyType: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
