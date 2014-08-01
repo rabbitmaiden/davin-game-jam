@@ -20,6 +20,7 @@ public class GameScript : MonoBehaviour {
 
 
 	public int incomingCount = 0;
+	private int threatCount = 0;
 	
 	void Awake() {
 		masterGame = GetComponentInParent<MasterGameScript>();
@@ -32,7 +33,6 @@ public class GameScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		otherPlayer = masterGame.GiveMeTheOtherPlayer(this);
-		Debug.Log("Me: "+isPlayer2+ " / Them: " + otherPlayer.isPlayer2);
 		foreach (Wave wave in masterGame.waves) {
 			Wave myWave = (Wave) wave.Clone ();
 			waves.Add (myWave);
@@ -78,13 +78,6 @@ public class GameScript : MonoBehaviour {
 			positionX = Mathf.CeilToInt((Screen.width / 4)*3 - 80);
 		}
 		GUI.Label (new Rect(positionX, positionY,200,30), incomingText, "Incoming");		
-		
-
-
-
-
-
-
 
 		if (!masterGame.gameOn) {
 
@@ -100,6 +93,13 @@ public class GameScript : MonoBehaviour {
 				positionX = Mathf.CeilToInt((Screen.width / 4)*3 - 80);
 			}
 			GUI.Label (new Rect(positionX, positionY,200,30), gameOverText, gameOverStyle);		
+		}
+	}
+
+	public void addThreat(int howMuch) {
+		threatCount += howMuch;
+		if ( threatCount > 100) {
+			threatCount = 100;
 		}
 	}
 }

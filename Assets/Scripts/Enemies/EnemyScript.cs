@@ -4,7 +4,7 @@ using UnityEngine;
 /// <summary>
 /// Enemy generic behavior
 /// </summary>
-public class EnemyScript : GameChild
+public class EnemyScript : GameChild, KillableObject
 {
 	private WeaponScript[] weapons;
 	private bool hasSpawn = false;
@@ -78,5 +78,10 @@ public class EnemyScript : GameChild
 	public void Moving(bool moving)
 	{
 		this.moveScript.enabled = moving;
+	}
+
+	public void killed() {
+		this.parentGame.addThreat (this.value);
+		Destroy (this.gameObject);
 	}
 }

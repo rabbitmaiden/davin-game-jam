@@ -27,7 +27,10 @@ public class HealthScript : MonoBehaviour
 		{
 			// Dead!
 			Debug.Log("I died. I was a "+this.name);
-			Destroy(gameObject);
+			//Destroy(gameObject);
+
+			KillableObject victim = gameObject.GetComponent(typeof(KillableObject)) as KillableObject;
+			victim.killed ();
 		}
 	}
 	

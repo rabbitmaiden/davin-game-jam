@@ -3,7 +3,7 @@
 /// <summary>
 /// Projectile behavior
 /// </summary>
-public class WallScript : GameChild
+public class WallScript : GameChild, KillableObject
 {
 	// 1 - Designer variables
 	
@@ -22,5 +22,10 @@ public class WallScript : GameChild
 		base.Start ();
 		// 2 - Limited time to live to avoid any leak
 		Destroy(gameObject, 20); // 20sec
+	}
+
+	public void killed() {
+		Destroy (this.gameObject);
+		// If a wall dies, does anyone care?
 	}
 }
