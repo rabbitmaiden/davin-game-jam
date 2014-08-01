@@ -65,10 +65,7 @@ public class GameScript : MonoBehaviour {
 				if (wave.type == "RandomSimpleWave") {
 					RandomSimpleWave rando = waveObject.GetComponent<RandomSimpleWave>();
 					rando.seed = wave.seed;
-					Debug.Log ("Set seed of "+wave.seed+" on rando");
 				}
-
-
 				// Put stuff just above the camera
 				float positionY = (playerCamera.orthographicSize) + 1;
 				waveObject.transform.localPosition = new Vector2(0, positionY);

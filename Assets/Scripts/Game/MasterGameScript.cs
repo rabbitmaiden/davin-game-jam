@@ -8,6 +8,9 @@ public class MasterGameScript : MonoBehaviour {
 	public bool gameOn = false;
 	public int winner = 0;
 	public List<Wave> waves;
+	private string winCondition;
+
+	public Texture[] endGameTextures;
 	
 	void Awake() {
 		games = this.gameObject.GetComponentsInChildren<GameScript>();
@@ -16,13 +19,13 @@ public class MasterGameScript : MonoBehaviour {
 		// Make the waves
 		// Hardcoded for now, we should maybe load these from XML or randomly generate them?
 
-		waves.Add(new Wave(5, "RandomSimpleWave", 0));
-		waves.Add(new Wave(10, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
+		waves.Add(new Wave(5, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
 		waves.Add(new Wave(15, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
-		waves.Add(new Wave(20, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
 		waves.Add(new Wave(25, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
-		waves.Add(new Wave(30, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
 		waves.Add(new Wave(35, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
+		waves.Add(new Wave(45, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
+		waves.Add(new Wave(55, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
+		waves.Add(new Wave(70, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
 		/*
 		waves.Add(new Wave(10, "RightSlantWave"));
 		waves.Add(new Wave(15, "LeftSlantWave"));
@@ -36,11 +39,7 @@ public class MasterGameScript : MonoBehaviour {
 	void Start () {
 		gameOn = true;		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 
 	public GameScript GiveMeTheOtherPlayer(GameScript me) {
 		foreach(GameScript you in games) {
@@ -51,8 +50,17 @@ public class MasterGameScript : MonoBehaviour {
 		return null;
 	}
 	
-	public void GameOver(int winner) {
+	public void GameOver(int winner, string wc) {
+
 		gameOn = false; 
+
+		// Turn everything(?) off
+		GameChild[] goblins = this.gameObject.GetComponentsInChildren<GameChild>();
+		foreach(GameChild goblin in goblins) {
+			goblin.enabled = false;
+		}
+
+
 		// Stop movement on everything
 		MovementScript[] movers = this.gameObject.GetComponentsInChildren<MovementScript>();
 		foreach(MovementScript mover in movers) {
@@ -66,17 +74,38 @@ public class MasterGameScript : MonoBehaviour {
 		}
 		
 		CameraFade.StartAlphaFade( new Color(0,0,0,0.6F), false, 3f, 0, () => { 
-			Invoke ("BackToTitleScreen", 4);
+			Invoke ("BackToTitleScreen", 10);
 		} );
 		this.winner = winner;
-
-
-		
-
+		winCondition = wc;
 	}
 
 	protected void BackToTitleScreen() {
 		Application.LoadLevel ("Title Screen");
 	}
 	
+	void OnGUI() {
+		if(gameOn) {
+			return;
+		}
+		int index = 0;
+		if (winner == 1) {
+			if (winCondition == "end") {
+				index = 1;
+			}
+		} else {
+			if (winCondition == "death") {
+				index = 2;
+			} else {
+				index = 3;
+			}
+		}
+		int width = Mathf.CeilToInt(Screen.width * 0.8f);
+		int height = 40;
+		int posX = Mathf.CeilToInt ((Screen.width/2)-(width/2));
+		int posY = Mathf.CeilToInt ((Screen.height/2) + 80);
+		GUI.Label (new Rect(posX, posY, width, height), endGameTextures[index]);
+
+
+	}
 }

@@ -145,6 +145,6 @@ public class PlayerScript: MovementScript, KillableObject {
 	public void killed() {
 		// Winner is other player
 		int winner = this.parentGame.isPlayer2 ? 1 : 2;
-		this.masterGame.GameOver(winner);
+		this.masterGame.GameOver(winner, "death");
 	}
 }

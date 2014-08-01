@@ -38,7 +38,7 @@ public class LevelScript : ScrollingScript {
 		GUI.Label (new Rect(positionX, positionY,200,30), progress);
 		
 		if (gameOver) {
-			this.masterGame.GameOver (this.parentGame.isPlayer2 ? 2 : 1);
+			this.masterGame.GameOver (this.parentGame.isPlayer2 ? 2 : 1, "end");
 		}
 	}
 	
