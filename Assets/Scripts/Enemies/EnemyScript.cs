@@ -47,7 +47,7 @@ public class EnemyScript : GameChild, KillableObject
 		{
 		
 			if (this.renderer.IsVisibleFrom (this.playerCamera) == false) {
-				Debug.Log("I died from being invisible. I am a "+this.name);
+				//Debug.Log("I died from being invisible. I am a "+this.name);
 				Destroy (this.gameObject);
 			}
 			

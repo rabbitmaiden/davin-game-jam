@@ -23,7 +23,7 @@ public class GameScript : MonoBehaviour {
 
 
 	public int incomingCount = 0;
-	private int threatCount = 0;
+	public int threatCount = 0;
 
 	private bool justDumpedThreat = false;
 
@@ -140,6 +140,9 @@ public class GameScript : MonoBehaviour {
 	
 	// Send the other player some threat
 	public void dumpThreat() {
+		if(threatCount <=0 || justDumpedThreat) {
+			return;
+		}
 		otherPlayer.getDunked (threatCount);
 		threatCount = 0;
 		justDumpedThreat = true;
