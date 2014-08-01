@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: WedgeWaveHolder
+  m_Name: LeftSlantWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,12 +36,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f58831dcf4a5bed4a856442922fb4125, type: 3}
+  m_Script: {fileID: 11500000, guid: 1cbfa9c437b79e649a6f4d22d41d77d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xPos: 0
-  yPos: 0
-  enemyToSpawn: {fileID: 100002, guid: b5325e9fe0fd550499c4dbb88b2b694d, type: 2}
+  deployed: 0
+  percent: 0
   enemyType: 
 --- !u!1001 &100100000
 Prefab:

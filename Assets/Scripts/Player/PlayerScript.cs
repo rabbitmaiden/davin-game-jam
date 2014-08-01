@@ -67,10 +67,13 @@ public class PlayerScript: MovementScript, KillableObject {
 
 		// 5 - Shooting
 		bool shoot;
+		bool dump;
 		if (!this.parentGame.isPlayer2) {
 			shoot = Input.GetButtonDown("p1f1");
+			dump = Input.GetButtonDown ("p1f2");
 		} else {
 			shoot = Input.GetButtonDown("p2f1");
+			dump = Input.GetButtonDown ("p2f2");
 		}
 		
 		if (shoot)
@@ -81,6 +84,11 @@ public class PlayerScript: MovementScript, KillableObject {
 				// false because the player is not an enemy
 				weapon.Attack(false);
 			}
+		}
+
+		if (dump)
+		{
+			this.parentGame.dumpThreat();
 		}
 	}
 	
