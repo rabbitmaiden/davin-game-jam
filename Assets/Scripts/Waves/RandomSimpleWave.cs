@@ -17,7 +17,7 @@ public class RandomSimpleWave : WaveScript {
 	{
 		Debug.Log ("RandomWave Spawning Wave "+seed);
 		// DEBUG**
-		//seed = 14;
+		// seed = 13;
 		switch(seed)
 		{
 		case 0:
