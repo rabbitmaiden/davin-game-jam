@@ -10,6 +10,8 @@ public class GameScript : MonoBehaviour {
 	public GUISkin guiSkin;
 	public Transform foreground;
 	public Texture[] threatTextures = new Texture[11];
+	public Texture packetTexture;
+	public Texture vectorTexture;
 	
 	private Camera playerCamera;
 	private MasterGameScript masterGame;
@@ -72,22 +74,47 @@ public class GameScript : MonoBehaviour {
 	
 	void OnGUI() {
 		GUI.skin = guiSkin;
-		// Incoming Count and Threat Count Temp
-		string incomingText = "Incoming: "+incomingCount + " / Threat: "+threatCount;
+		
 		int positionY = Mathf.CeilToInt (5);
+		
+		// Incoming Count
+		string incomingText = incomingCount.ToString();
+		if(incomingCount > 99) {
+			incomingText = "99";
+		}
+	
 		int positionX = Mathf.CeilToInt((Screen.width / 4) - 120);
 		if (isPlayer2) {
-			positionX = Mathf.CeilToInt((Screen.width / 4)*3 - 80);
+			positionX = Mathf.CeilToInt((Screen.width / 4)*3 - 85);
+			GUI.Label (new Rect(positionX, positionY,200,30), incomingText, "Incoming2");
 		}	
-		GUI.Label (new Rect(positionX, positionY,200,30), incomingText, "Incoming");
+		else {
+			GUI.Label (new Rect(positionX, positionY,200,30), incomingText, "Incoming");
+		}
 		
 		
-		positionX = Mathf.CeilToInt((Screen.width / 4) + 65);
+		// Threat Meter
+		positionX = Mathf.CeilToInt((Screen.width / 4) + 50);
 		if (isPlayer2) {
-			positionX = Mathf.CeilToInt((Screen.width / 4)*3 + 80);
+			positionX = Mathf.CeilToInt((Screen.width / 4)*3 - 250);
 		}		
-		GUI.Label (new Rect(positionX, positionY,400,50), threatTextures[threatCount/10]);
+		GUI.Label (new Rect(positionX, positionY,200,50), threatTextures[threatCount/10]);
 
+		// Vector Label
+		positionX = Mathf.CeilToInt((Screen.width / 4) - 60);
+		if (isPlayer2) {
+			positionX = Mathf.CeilToInt((Screen.width / 4)*3 - 50);
+		}		
+		GUI.Label (new Rect(positionX, positionY,200,50), vectorTexture);	
+
+		// Incoming Label
+		positionX = Mathf.CeilToInt((Screen.width / 4) - 225);
+		if (isPlayer2) {
+			positionX = Mathf.CeilToInt((Screen.width / 4)*3 + 120);
+		}		
+		GUI.Label (new Rect(positionX, positionY,200,50), packetTexture);			
+		
+		
 		if (!masterGame.gameOn) {
 			bool isWinner = (masterGame.winner == (isPlayer2 ? 2 : 1));
 			string gameOverText = isWinner ? "VICTORIOUS" : "DELETED";
