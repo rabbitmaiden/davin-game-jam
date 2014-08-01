@@ -659,7 +659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 400000, guid: 4b46e33f5a0b14881bd113edc34fba09, type: 2}
   driftSpeed: 3
-  shootingRate: .25
+  shootingRate: .150000006
   ceaseFire: 0
 --- !u!114 &1181334358
 MonoBehaviour:
@@ -673,7 +673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e269b234df7496595e363ce68c50ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  hp: 1
   isEnemy: 0
 --- !u!114 &1181334359
 MonoBehaviour:
@@ -926,7 +926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e269b234df7496595e363ce68c50ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 5
+  hp: 1
   isEnemy: 0
 --- !u!114 &1489003053
 MonoBehaviour:
@@ -942,7 +942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 400000, guid: 4b46e33f5a0b14881bd113edc34fba09, type: 2}
   driftSpeed: 3
-  shootingRate: .25
+  shootingRate: .150000006
   ceaseFire: 0
 --- !u!1 &1592658185
 GameObject:
@@ -1639,7 +1639,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 254d6ac4c30824a4c8f5a1ca3757182a, type: 2}
       propertyPath: hp
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6000000, guid: 254d6ac4c30824a4c8f5a1ca3757182a, type: 2}
@@ -1721,7 +1721,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 254d6ac4c30824a4c8f5a1ca3757182a, type: 2}
       propertyPath: hp
-      value: 100
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6000000, guid: 254d6ac4c30824a4c8f5a1ca3757182a, type: 2}
