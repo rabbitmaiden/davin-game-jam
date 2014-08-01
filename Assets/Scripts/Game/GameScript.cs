@@ -9,6 +9,7 @@ public class GameScript : MonoBehaviour {
 	public bool isPlayer2 = false;
 	public GUISkin guiSkin;
 	public Transform foreground;
+	public Texture[] threatTextures = new Texture[11];
 	
 	private Camera playerCamera;
 	private MasterGameScript masterGame;
@@ -75,8 +76,15 @@ public class GameScript : MonoBehaviour {
 		int positionX = Mathf.CeilToInt((Screen.width / 4) - 120);
 		if (isPlayer2) {
 			positionX = Mathf.CeilToInt((Screen.width / 4)*3 - 80);
-		}
-		GUI.Label (new Rect(positionX, positionY,200,30), incomingText, "Incoming");		
+		}	
+		GUI.Label (new Rect(positionX, positionY,200,30), incomingText, "Incoming");
+		
+		
+		positionX = Mathf.CeilToInt((Screen.width / 4) + 65);
+		if (isPlayer2) {
+			positionX = Mathf.CeilToInt((Screen.width / 4)*3 + 80);
+		}		
+		GUI.Label (new Rect(positionX, positionY,400,50), threatTextures[threatCount/10]);
 
 		if (!masterGame.gameOn) {
 
