@@ -10,4 +10,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Attract Mode.unity
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+  - enabled: 1
     path: Assets/Scenes/default.unity
