@@ -30,7 +30,6 @@ public class EnemyScript : GameChild, KillableObject
 		{
 			weapon.enabled = false;
 		}
-		this.parentGame.incomingCount++;
 		//Debug.Log("Good morning. I'm " + this.name);
 	}
 	

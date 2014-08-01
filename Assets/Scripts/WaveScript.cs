@@ -26,6 +26,7 @@ public class WaveScript : GameChild {
 			enemyObject.transform.localPosition = ep.position;
 			EnemyScript enemyScript = enemyObject.GetComponent<EnemyScript>();
 			enemyScript.value = ep.value;
+			this.parentGame.incomingCount++;
 		}
 	}
 }

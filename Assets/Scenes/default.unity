@@ -113,6 +113,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: ac2366931b33c0d4596fa38d2c1d9862, type: 2}
+      propertyPath: warningIndicator
+      value: 
+      objectReference: {fileID: 2800000, guid: 8fadbcf68cfefab4e9e786f98f1d0340, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac2366931b33c0d4596fa38d2c1d9862, type: 2}
   m_RootGameObject: {fileID: 1412750216}
@@ -247,6 +251,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40e43274836bf5b4c8f469d6943fdace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: 3
+  waveCount: 0
+  warningIndicator: {fileID: 2800000, guid: 8fadbcf68cfefab4e9e786f98f1d0340, type: 3}
 --- !u!1 &581057172
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,6 +505,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: ac2366931b33c0d4596fa38d2c1d9862, type: 2}
+      propertyPath: warningIndicator
+      value: 
+      objectReference: {fileID: 2800000, guid: 8fadbcf68cfefab4e9e786f98f1d0340, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac2366931b33c0d4596fa38d2c1d9862, type: 2}
   m_RootGameObject: {fileID: 200517029}
@@ -633,7 +644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e269b234df7496595e363ce68c50ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 1
+  hp: 5
   isEnemy: 0
 --- !u!114 &1181334359
 MonoBehaviour:
@@ -775,6 +786,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40e43274836bf5b4c8f469d6943fdace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: 3
+  waveCount: 0
+  warningIndicator: {fileID: 2800000, guid: 8fadbcf68cfefab4e9e786f98f1d0340, type: 3}
 --- !u!1 &1489003046
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,7 +897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e269b234df7496595e363ce68c50ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  hp: 5
   isEnemy: 0
 --- !u!114 &1489003053
 MonoBehaviour:
@@ -1087,6 +1101,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOn: 0
   winner: 0
+  endGameTextures:
+  - {fileID: 2800000, guid: f96f15e288edc814a9e08ac3abf46815, type: 3}
+  - {fileID: 2800000, guid: ece490e54cf23de43afaae75bb5f07e0, type: 3}
+  - {fileID: 2800000, guid: 18b568cc5a0920d4ea609b0391a9d929, type: 3}
+  - {fileID: 2800000, guid: 61f9da5ddbee67a47a1d1e06f2de98a4, type: 3}
 --- !u!81 &1728782917
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1588,7 +1607,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 254d6ac4c30824a4c8f5a1ca3757182a, type: 2}
       propertyPath: hp
-      value: 100
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6000000, guid: 254d6ac4c30824a4c8f5a1ca3757182a, type: 2}
@@ -1670,7 +1689,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 254d6ac4c30824a4c8f5a1ca3757182a, type: 2}
       propertyPath: hp
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6000000, guid: 254d6ac4c30824a4c8f5a1ca3757182a, type: 2}
