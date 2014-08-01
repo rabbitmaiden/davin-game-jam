@@ -7,7 +7,7 @@ public class RevengeWave : GameChild {
 	protected int numEnemies = 0;
 
 	void Awake() {
-		enemyPositions = new List<EnemyPosition>();
+		//enemyPositions = new List<EnemyPosition>();
 	}
 
 	public void GenerateEnemiesBasedOnThreat(int threat) {
