@@ -227,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deployed: 0
   percent: 0
+  enemyValue: 0
   enemyType: 
 --- !u!1 &820969885
 GameObject:
@@ -373,6 +374,20 @@ MonoBehaviour:
   isPlayer2: 0
   guiSkin: {fileID: 11400000, guid: 75b37630554784e33b4a6f7b5e56ec26, type: 2}
   foreground: {fileID: 0}
+  threatTextures:
+  - {fileID: 2800000, guid: f90d14c3a39983745b5b48149fda349d, type: 3}
+  - {fileID: 2800000, guid: 828e488256122e148b255605757dd5be, type: 3}
+  - {fileID: 2800000, guid: 563292b8db708b34d99741082060cef0, type: 3}
+  - {fileID: 2800000, guid: 16a90d2074df05a4d9785ccde60c62b4, type: 3}
+  - {fileID: 2800000, guid: 7272e19ef17d1ca4db268eecb08ec05a, type: 3}
+  - {fileID: 2800000, guid: e9b6d9e1ee79e194e874df10e33442ce, type: 3}
+  - {fileID: 2800000, guid: 02a81bacd2f28a64e90ec4cf6e821557, type: 3}
+  - {fileID: 2800000, guid: 1010aad77aa19a742bc09c9567a91aff, type: 3}
+  - {fileID: 2800000, guid: a95ad36feaf67ec439efe615d49f54f8, type: 3}
+  - {fileID: 2800000, guid: feb91e74b276b174da8647d9321b9d9c, type: 3}
+  - {fileID: 2800000, guid: 0df2e208bef5c5c46a45ffeb47487b54, type: 3}
+  packetTexture: {fileID: 2800000, guid: 1564fae8a22b9184cb1c2bec934ce9b9, type: 3}
+  vectorTexture: {fileID: 2800000, guid: e3acbc89807b36a48a3d6456c8f8ce4a, type: 3}
   incomingCount: 0
 --- !u!1 &1152016042
 GameObject:
@@ -417,6 +432,20 @@ MonoBehaviour:
   isPlayer2: 1
   guiSkin: {fileID: 11400000, guid: 75b37630554784e33b4a6f7b5e56ec26, type: 2}
   foreground: {fileID: 0}
+  threatTextures:
+  - {fileID: 2800000, guid: f90d14c3a39983745b5b48149fda349d, type: 3}
+  - {fileID: 2800000, guid: 7afe8b637d0ecbb4b908863dc7d977f0, type: 3}
+  - {fileID: 2800000, guid: 49bec088810ec5e4f8281ac6e152a6a6, type: 3}
+  - {fileID: 2800000, guid: e1010fb8d4da2af40a39bf3858c17bf8, type: 3}
+  - {fileID: 2800000, guid: b63df22cb7b2c77449c38da8fc0ea821, type: 3}
+  - {fileID: 2800000, guid: 5108e0f45d7d0d348acb5cb8f4316f6a, type: 3}
+  - {fileID: 2800000, guid: 8b844bdc2bd0de4498e0413b11ce87ab, type: 3}
+  - {fileID: 2800000, guid: 15da0f965a482554a8c4cb04854b4adb, type: 3}
+  - {fileID: 2800000, guid: d25a498858b633c4cb501bbb25551582, type: 3}
+  - {fileID: 2800000, guid: 1e29b42525cbfa64eb95c4d7a2d64234, type: 3}
+  - {fileID: 2800000, guid: 5fbdab04da0fc3449b485c3a05c93571, type: 3}
+  packetTexture: {fileID: 2800000, guid: d57f5c58371a25143959cb23d775aa78, type: 3}
+  vectorTexture: {fileID: 2800000, guid: edf0b0703c3a68b47907489ac8392ff4, type: 3}
   incomingCount: 0
 --- !u!1 &1181334354
 GameObject:
@@ -1019,9 +1048,9 @@ Camera:
   m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: .550000012
+    x: .5
     y: 0
-    width: .449999988
+    width: .49000001
     height: .899999976
   near clip plane: .300000012
   far clip plane: 1000
@@ -1093,7 +1122,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: .5
+    width: .49000001
     height: .899999976
   near clip plane: .300000012
   far clip plane: 1000
