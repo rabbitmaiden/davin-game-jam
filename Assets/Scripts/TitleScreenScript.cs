@@ -19,7 +19,7 @@ public class TitleScreenScript : MonoBehaviour {
 		    Input.GetButtonDown("p2f2")) {
 			Debug.Log ("Time to go!");
 			HideEverything ();
-			Application.LoadLevel ("default");
+			Application.LoadLevel ("Tutorial");
 		} else if (Time.time > loadTime + timeToAttract) {
 			if(!fading){
 				CameraFade.StartAlphaFade( new Color(0,0,0,0.8F), false, 4f, 0, () => { 
