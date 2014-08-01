@@ -26,7 +26,6 @@ public class GameScript : MonoBehaviour {
 		masterGame = GetComponentInParent<MasterGameScript>();
 		foreground = transform.Find ("Camera/Foreground");
 		level = GetComponentInChildren<LevelScript>();
-		camera = GetComponentInChildren<Camera>();
 		waves = new List<Wave>();
 	}
 
