@@ -5,6 +5,7 @@ public class LevelScript : ScrollingScript {
 
 	private float totalDistance = 200;
 	public double percent = 0;
+	public Texture indicator;
 	
 	
 	public GUISkin customSkin;
@@ -36,6 +37,15 @@ public class LevelScript : ScrollingScript {
 			positionX = Screen.width - 180;
 		}
 		GUI.Label (new Rect(positionX, positionY,200,30), progress);
+		
+		// Draw progress indicators
+		positionY = (int) (Screen.height - (Screen.height * percent / 100.0));
+		positionX = Screen.width / 2 - 35;
+		if (this.parentGame.isPlayer2) {
+			positionX = Screen.width / 2 - 5;
+		}
+		GUI.Label (new Rect(positionX, positionY,200,30), indicator);
+
 		
 		if (gameOver) {
 			this.masterGame.GameOver (this.parentGame.isPlayer2 ? 2 : 1, "end");

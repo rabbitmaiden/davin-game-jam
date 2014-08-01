@@ -2,31 +2,31 @@ Initialize engine version: 4.5.2f1 (9abb1b59b47c)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA Quadro 2000 (ID=0xdd8)
+    Renderer: NVIDIA Quadro 1000M  (ID=0xdfa)
     Vendor:   NVIDIA
-    VRAM:     977 MB
+    VRAM:     2014 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\arehfeldt\Desktop\THUNDERDOME\davin-game-jam\test_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\arehfeldt\Desktop\THUNDERDOME\davin-game-jam\test_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\arehfeldt\Desktop\THUNDERDOME\davin-game-jam\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\arehfeldt\Desktop\THUNDERDOME\davin-game-jam\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.061 seconds
+Platform assembly: C:\Users\dpavlas\Documents\GitHub\Thunderdome\davin-game-jam\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\dpavlas\Documents\GitHub\Thunderdome\davin-game-jam\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\dpavlas\Documents\GitHub\Thunderdome\davin-game-jam\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\dpavlas\Documents\GitHub\Thunderdome\davin-game-jam\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+- Completed reload, in  0.050 seconds
 <RI> Initializing input.
 <RI> Input initialized.
-desktop: 1920x1200 59Hz; virtual: 1920x1200 at 0,0
-Platform assembly: C:\Users\arehfeldt\Desktop\THUNDERDOME\davin-game-jam\test_Data\Managed\System.dll (this message is harmless)
-Platform assembly: C:\Users\arehfeldt\Desktop\THUNDERDOME\davin-game-jam\test_Data\Managed\System.Core.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+Platform assembly: C:\Users\dpavlas\Documents\GitHub\Thunderdome\davin-game-jam\test_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\dpavlas\Documents\GitHub\Thunderdome\davin-game-jam\test_Data\Managed\System.Core.dll (this message is harmless)
 Time to go!
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-UnloadTime: 0.242453 ms
+UnloadTime: 0.790667 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 107.
-Total: 0.575599 ms (FindLiveObjects: 0.012067 ms CreateObjectMapping: 0.009873 ms MarkObjects: 0.057047 ms  DeleteObjects: 0.009873 ms)
+Total: 2.180287 ms (FindLiveObjects: 0.049673 ms CreateObjectMapping: 0.020936 ms MarkObjects: 0.169546 ms  DeleteObjects: 0.029557 ms)
 
-UnloadTime: 0.259275 ms
+UnloadTime: 0.683110 ms
 hey now
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
@@ -34,7 +34,7 @@ hey now
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 243.
-Total: 0.938365 ms (FindLiveObjects: 0.009507 ms CreateObjectMapping: 0.011336 ms MarkObjects: 0.080086 ms  DeleteObjects: 0.008045 ms)
+Total: 1.494714 ms (FindLiveObjects: 0.024220 ms CreateObjectMapping: 0.017652 ms MarkObjects: 0.164619 ms  DeleteObjects: 0.021757 ms)
 
 Sending wave RandomSimpleWave
  
@@ -60,19 +60,11 @@ Sending wave RandomSimpleWave
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-RandomWave Spawning Wave 15
+RandomWave Spawning Wave 7
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-RandomWave Spawning Wave 15
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 6
+RandomWave Spawning Wave 7
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -80,7 +72,15 @@ Sending wave RandomSimpleWave
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-RandomWave Spawning Wave 6
+Sending wave RandomSimpleWave
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+RandomWave Spawning Wave 2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+RandomWave Spawning Wave 2
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -88,7 +88,15 @@ Sending wave RandomSimpleWave
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-RandomWave Spawning Wave 8
+Sending wave RandomSimpleWave
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+RandomWave Spawning Wave 5
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+RandomWave Spawning Wave 5
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -96,7 +104,15 @@ Sending wave RandomSimpleWave
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-RandomWave Spawning Wave 8
+Sending wave RandomSimpleWave
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+RandomWave Spawning Wave 18
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+RandomWave Spawning Wave 18
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -104,7 +120,15 @@ Sending wave RandomSimpleWave
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-RandomWave Spawning Wave 16
+Sending wave RandomSimpleWave
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+RandomWave Spawning Wave 2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+RandomWave Spawning Wave 2
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -112,329 +136,21 @@ Sending wave RandomSimpleWave
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-RandomWave Spawning Wave 16
+RandomWave Spawning Wave 12
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-UnloadTime: 0.763199 ms
+Sending wave RandomSimpleWave
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+RandomWave Spawning Wave 12
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+UnloadTime: 0.488522 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 104 unused Assets to reduce memory usage. Loaded Objects now: 186.
-Total: 1.062335 ms (FindLiveObjects: 0.010970 ms CreateObjectMapping: 0.012433 ms MarkObjects: 0.134208 ms  DeleteObjects: 0.061070 ms)
-
-Time to go!
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-UnloadTime: 0.258178 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 176.
-Total: 0.986271 ms (FindLiveObjects: 0.007313 ms CreateObjectMapping: 0.010970 ms MarkObjects: 0.135671 ms  DeleteObjects: 0.009873 ms)
-
-UnloadTime: 0.250499 ms
-hey now
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 251.
-Total: 0.994316 ms (FindLiveObjects: 0.009873 ms CreateObjectMapping: 0.012067 ms MarkObjects: 0.142254 ms  DeleteObjects: 0.008045 ms)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 18
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 18
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 3
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 3
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-UnloadTime: 0.454555 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 95 unused Assets to reduce memory usage. Loaded Objects now: 186.
-Total: 1.062335 ms (FindLiveObjects: 0.009873 ms CreateObjectMapping: 0.012067 ms MarkObjects: 0.157247 ms  DeleteObjects: 0.059973 ms)
-
-UnloadTime: 0.246842 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 143.
-Total: 1.037468 ms (FindLiveObjects: 0.007679 ms CreateObjectMapping: 0.011336 ms MarkObjects: 0.116655 ms  DeleteObjects: 0.074966 ms)
-
-UnloadTime: 0.241356 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 148.
-Total: 0.955919 ms (FindLiveObjects: 0.008045 ms CreateObjectMapping: 0.010970 ms MarkObjects: 0.119215 ms  DeleteObjects: 0.008410 ms)
-
-Time to go!
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-UnloadTime: 0.248670 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 142.
-Total: 0.970181 ms (FindLiveObjects: 0.008045 ms CreateObjectMapping: 0.010970 ms MarkObjects: 0.129089 ms  DeleteObjects: 0.011336 ms)
-
-UnloadTime: 0.245013 ms
-hey now
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 251.
-Total: 0.995413 ms (FindLiveObjects: 0.009873 ms CreateObjectMapping: 0.012067 ms MarkObjects: 0.150665 ms  DeleteObjects: 0.008410 ms)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 6
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 6
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 7
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 7
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 20
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 20
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 9
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 9
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 5
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 5
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 4
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 4
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 18
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-UnloadTime: 0.814761 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 105 unused Assets to reduce memory usage. Loaded Objects now: 186.
-Total: 1.090128 ms (FindLiveObjects: 0.009873 ms CreateObjectMapping: 0.013164 ms MarkObjects: 0.176629 ms  DeleteObjects: 0.062899 ms)
-
-Time to go!
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-UnloadTime: 0.249402 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 176.
-Total: 1.012601 ms (FindLiveObjects: 0.007313 ms CreateObjectMapping: 0.011702 ms MarkObjects: 0.168584 ms  DeleteObjects: 0.009507 ms)
-
-UnloadTime: 0.250864 ms
-hey now
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 251.
-Total: 1.021377 ms (FindLiveObjects: 0.009507 ms CreateObjectMapping: 0.012433 ms MarkObjects: 0.179189 ms  DeleteObjects: 0.008045 ms)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 15
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 15
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 14
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 14
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 8
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 8
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 20
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 20
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 4
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 4
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 14
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sending wave RandomSimpleWave
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-RandomWave Spawning Wave 14
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+Total: 1.049296 ms (FindLiveObjects: 0.007389 ms CreateObjectMapping: 0.008620 ms MarkObjects: 0.155177 ms  DeleteObjects: 0.057473 ms)
 
