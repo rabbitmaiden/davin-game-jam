@@ -26,6 +26,8 @@ public class MasterGameScript : MonoBehaviour {
 		waves.Add(new Wave(45, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
 		waves.Add(new Wave(55, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
 		waves.Add(new Wave(70, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
+		waves.Add(new Wave(75, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
+		waves.Add(new Wave(80, "RandomSimpleWave", RandomSimpleWave.GetSeed ()));
 		/*
 		waves.Add(new Wave(10, "RightSlantWave"));
 		waves.Add(new Wave(15, "LeftSlantWave"));

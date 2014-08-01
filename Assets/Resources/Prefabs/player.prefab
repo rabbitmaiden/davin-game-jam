@@ -135,7 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 400000, guid: 4b46e33f5a0b14881bd113edc34fba09, type: 2}
-  shootingRate: .25
+  driftSpeed: 3
+  shootingRate: .150000006
   ceaseFire: 0
 --- !u!212 &21200000
 SpriteRenderer:

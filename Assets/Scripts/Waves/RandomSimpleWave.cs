@@ -76,7 +76,7 @@ public class RandomSimpleWave : WaveScript {
 			enemyPositions.Add(new EnemyPosition(3.5f, 3f, "basic floater", 5));
 			break;
 		case 8:
-			enemyPositions.Add(new EnemyPosition(-4f, 6f, "basic floater", 5));
+			enemyPositions.Add(new EnemyPosition(-4f, 6f, "Basic Wall", 5));
 			enemyPositions.Add(new EnemyPosition(-3f, 6f, "basic enemy", 5));
 			enemyPositions.Add(new EnemyPosition(-2f, 6f, "basic floater", 5));
 			enemyPositions.Add(new EnemyPosition(-0f, 4f, "super baddy", 20));
