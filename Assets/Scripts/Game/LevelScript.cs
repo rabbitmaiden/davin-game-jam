@@ -40,9 +40,9 @@ public class LevelScript : ScrollingScript {
 		
 		// Draw progress indicators
 		positionY = (int) (Screen.height - (Screen.height * percent / 100.0));
-		positionX = Screen.width / 2 - 35;
+		positionX = Screen.width / 2 - 23;
 		if (this.parentGame.isPlayer2) {
-			positionX = Screen.width / 2 - 5;
+			positionX = Screen.width / 2 - 0;
 		}
 		GUI.Label (new Rect(positionX, positionY,200,30), indicator);
 
