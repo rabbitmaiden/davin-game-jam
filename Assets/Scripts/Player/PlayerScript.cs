@@ -58,6 +58,11 @@ public class PlayerScript: MovementScript, KillableObject {
 		var bottomBorder = this.playerCamera.ViewportToWorldPoint(
 			new Vector3(0, 1, dist)
 			).y;
+			
+		// Weirdly, bottom border is actually at the top of the screen.
+		// Let's offset the allowable region due to the rendering hack we use
+		// to get GUI labels to work (since our camera had to be extended to top)
+		bottomBorder = bottomBorder - 1f;
 		
 		transform.position = new Vector3(
 			Mathf.Clamp(transform.position.x, leftBorder, rightBorder),
