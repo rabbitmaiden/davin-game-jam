@@ -10,7 +10,7 @@ public class GameScript : MonoBehaviour {
 	public GUISkin guiSkin;
 	public Transform foreground;
 	
-	private Camera camera;
+	private Camera playerCamera;
 	private MasterGameScript masterGame;
 	private LevelScript level;
 
@@ -20,19 +20,19 @@ public class GameScript : MonoBehaviour {
 
 
 	public int incomingCount = 0;
+	private int threatCount = 0;
 	
 	void Awake() {
 		masterGame = GetComponentInParent<MasterGameScript>();
 		foreground = transform.Find ("Camera/Foreground");
+		playerCamera = GetComponentInChildren<Camera>();
 		level = GetComponentInChildren<LevelScript>();
-		camera = GetComponentInChildren<Camera>();
 		waves = new List<Wave>();
 	}
 
 	// Use this for initialization
 	void Start () {
 		otherPlayer = masterGame.GiveMeTheOtherPlayer(this);
-		Debug.Log("Me: "+isPlayer2+ " / Them: " + otherPlayer.isPlayer2);
 		foreach (Wave wave in masterGame.waves) {
 			Wave myWave = (Wave) wave.Clone ();
 			waves.Add (myWave);
@@ -55,9 +55,8 @@ public class GameScript : MonoBehaviour {
 				}
 				waveObject.transform.parent = foreground;
 				// Put stuff just above the camera
-				float positionY = (this.camera.orthographicSize) + 1;
+				float positionY = (playerCamera.orthographicSize) + 1;
 				waveObject.transform.localPosition = new Vector2(0, positionY);
-				
 				Debug.Log ("Sending wave "+wave.type);
 			}
 		}
@@ -78,13 +77,6 @@ public class GameScript : MonoBehaviour {
 			positionX = Mathf.CeilToInt((Screen.width / 4)*3 - 80);
 		}
 		GUI.Label (new Rect(positionX, positionY,200,30), incomingText, "Incoming");		
-		
-
-
-
-
-
-
 
 		if (!masterGame.gameOn) {
 
@@ -100,6 +92,13 @@ public class GameScript : MonoBehaviour {
 				positionX = Mathf.CeilToInt((Screen.width / 4)*3 - 80);
 			}
 			GUI.Label (new Rect(positionX, positionY,200,30), gameOverText, gameOverStyle);		
+		}
+	}
+
+	public void addThreat(int howMuch) {
+		threatCount += howMuch;
+		if ( threatCount > 100) {
+			threatCount = 100;
 		}
 	}
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerScript: MovementScript {
+public class PlayerScript: MovementScript, KillableObject {
 
 	/// <summary>
 	/// 1 - The speed of the ship
@@ -126,9 +126,12 @@ public class PlayerScript: MovementScript {
 
 	void OnDestroy()
 	{
+
+	}
+
+	public void killed() {
 		// Winner is other player
 		int winner = this.parentGame.isPlayer2 ? 1 : 2;
 		this.masterGame.GameOver(winner);
-
 	}
 }
