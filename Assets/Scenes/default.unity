@@ -358,6 +358,7 @@ MonoBehaviour:
   isPlayer2: 0
   guiSkin: {fileID: 11400000, guid: 75b37630554784e33b4a6f7b5e56ec26, type: 2}
   foreground: {fileID: 0}
+  incomingCount: 0
 --- !u!1 &1152016042
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +402,7 @@ MonoBehaviour:
   isPlayer2: 1
   guiSkin: {fileID: 11400000, guid: 75b37630554784e33b4a6f7b5e56ec26, type: 2}
   foreground: {fileID: 0}
+  incomingCount: 0
 --- !u!1 &1181334354
 GameObject:
   m_ObjectHideFlags: 0
