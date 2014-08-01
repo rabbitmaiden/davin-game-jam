@@ -66,13 +66,13 @@ public class MasterGameScript : MonoBehaviour {
 		}
 		
 		CameraFade.StartAlphaFade( new Color(0,0,0,0.6F), false, 3f, 0, () => { 
-			
+			Invoke ("BackToTitleScreen", 4);
 		} );
 		this.winner = winner;
 
 
 		
-		Invoke ("BackToTitleScreen", 10);
+
 	}
 
 	protected void BackToTitleScreen() {

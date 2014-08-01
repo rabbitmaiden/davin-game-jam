@@ -52,7 +52,7 @@ public class RevengeSpawner : GameChild {
 	}
 
 	void LaunchWave(){
-		if( waves.Count == 0) {
+		if( waves.Count == 0 || !masterGame.gameOn ) {
 			return;
 		}
 
