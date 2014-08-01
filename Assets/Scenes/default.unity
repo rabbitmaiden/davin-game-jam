@@ -644,7 +644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e269b234df7496595e363ce68c50ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 5
+  hp: 100
   isEnemy: 0
 --- !u!114 &1181334359
 MonoBehaviour:
@@ -1689,7 +1689,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 254d6ac4c30824a4c8f5a1ca3757182a, type: 2}
       propertyPath: hp
-      value: 5
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6000000, guid: 254d6ac4c30824a4c8f5a1ca3757182a, type: 2}
