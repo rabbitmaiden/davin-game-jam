@@ -630,6 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 400000, guid: 4b46e33f5a0b14881bd113edc34fba09, type: 2}
+  driftSpeed: 3
   shootingRate: .25
   ceaseFire: 0
 --- !u!114 &1181334358
@@ -912,6 +913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 400000, guid: 4b46e33f5a0b14881bd113edc34fba09, type: 2}
+  driftSpeed: 3
   shootingRate: .25
   ceaseFire: 0
 --- !u!1 &1592658185

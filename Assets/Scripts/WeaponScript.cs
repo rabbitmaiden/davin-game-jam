@@ -13,6 +13,8 @@ public class WeaponScript : GameChild
 	/// Projectile prefab for shooting
 	/// </summary>
 	public Transform shotPrefab;
+
+	public float driftSpeed = 3f;
 	
 	/// <summary>
 	/// Cooldown in seconds between two shots
@@ -26,7 +28,8 @@ public class WeaponScript : GameChild
 	//--------------------------------
 	
 	private float shootCooldown;
-	
+
+
 	public override void Start()
 	{
 		base.Start();
@@ -72,6 +75,26 @@ public class WeaponScript : GameChild
 			if (move != null)
 			{
 				move.direction = this.transform.up; // towards in 2D space is the right of the sprite
+
+				if (!shot.isEnemyShot){
+					float inputX, inputY;
+					// 3 - Retrieve axis information
+					if (this.parentGame.isPlayer2) 
+					{
+						inputX = Input.GetAxis ("p2h");
+						inputY = Input.GetAxis ("p2v");
+					} 
+					else 
+					{
+						inputX = Input.GetAxis ("p1h");
+						inputY = Input.GetAxis ("p1v");
+					}
+					float yDir = move.direction.y;
+					move.direction = new Vector2(inputX, yDir);
+					float ySpeed = move.speed.y;
+					move.speed = new Vector2(driftSpeed, ySpeed);
+				}
+
 			}
 		}
 	}
